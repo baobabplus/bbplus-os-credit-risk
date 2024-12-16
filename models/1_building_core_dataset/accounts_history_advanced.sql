@@ -4,16 +4,6 @@
     We thus need to use a User Defined Function (here in Javascript) - but we could also use another programming language. 
 */
 
-{{ config(
-    materialized='table',
-    partition_by={
-        "field": "reporting_date",
-        "data_type" : "timestamp",
-        "granularity": "day"
-    },
-    cluster_by = ['account_id']
-) }}
-
 WITH accounts_history as (
     SELECT * FROM {{ref('accounts_history_beginner')}}
 ),

@@ -6,16 +6,6 @@
     - Calculating cumulated sums to describe the cumulated amount paid, and a few other useful fields
 */
 
-{{ config(
-    materialized='table',
-    partition_by={
-        "field": "reporting_date",
-        "data_type" : "timestamp",
-        "granularity": "day"
-    },
-    cluster_by = ['account_id']
-) }}
-
 WITH accounts as (
   SELECT * FROM {{ref('cleaned_accounts')}}
 ),

@@ -37,5 +37,7 @@ on-run-start:
 models:
   creditrisk:
     # Config indicated by + and applies to all files under models/example/
-    example:
-      +materialized: view
+    1_building_core_dataset:
+      +materialized: table
+    2_cohort_visualizations:
+      +materialized: table
