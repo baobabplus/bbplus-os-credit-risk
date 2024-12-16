@@ -3074,3 +3074,2192 @@ SELECT * FROM final_kpis
 [0m21:48:04.175730 [debug] [MainThread]: Command `dbt run` succeeded at 21:48:04.175571 after 86.68 seconds
 [0m21:48:04.176364 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9ec2a354f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9ec9898e20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9ec2f64ee0>]}
 [0m21:48:04.177187 [debug] [MainThread]: Flushing usage events
+[0m21:56:04.542028 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8ea2a32550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8ea4af1d90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8ea4af1400>]}
+
+
+============================== 21:56:04.547707 | 0777e40a-5848-4ba8-b5fb-d7e2fcceda3b ==============================
+[0m21:56:04.547707 [info ] [MainThread]: Running with dbt=1.8.8
+[0m21:56:04.548713 [debug] [MainThread]: running dbt with arguments {'indirect_selection': 'eager', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'write_json': 'True', 'use_experimental_parser': 'False', 'quiet': 'False', 'target_path': 'None', 'invocation_command': 'dbt run --select 1+accounts_history_advanced', 'introspect': 'True', 'no_print': 'None', 'debug': 'False', 'version_check': 'True', 'printer_width': '80', 'static_parser': 'True', 'warn_error': 'None', 'use_colors': 'True', 'fail_fast': 'False', 'log_cache_events': 'False', 'empty': 'False', 'send_anonymous_usage_stats': 'True', 'log_format': 'default', 'partial_parse': 'True', 'profiles_dir': '/Users/david/.dbt', 'cache_selected_only': 'False', 'log_path': '/Users/david/bbplus-os-credit-risk/bbplus-os-credit-risk/logs'}
+[0m21:56:09.366948 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '0777e40a-5848-4ba8-b5fb-d7e2fcceda3b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8ea8bbc370>]}
+[0m21:56:09.442518 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '0777e40a-5848-4ba8-b5fb-d7e2fcceda3b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8ea4975e80>]}
+[0m21:56:09.443438 [info ] [MainThread]: Registered adapter: bigquery=1.8.3
+[0m21:56:09.477038 [debug] [MainThread]: checksum: ec53e341a936509427e16df1c646386a84befec52c1957e3f4359fbc36fc93f5, vars: {}, profile: , target: , version: 1.8.8
+[0m21:56:09.843855 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m21:56:09.844480 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m21:56:09.922989 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '0777e40a-5848-4ba8-b5fb-d7e2fcceda3b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8ea8f2cdc0>]}
+[0m21:56:10.161596 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '0777e40a-5848-4ba8-b5fb-d7e2fcceda3b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8ea8c4c820>]}
+[0m21:56:10.162492 [info ] [MainThread]: Found 6 models, 2 seeds, 1 operation, 480 macros
+[0m21:56:10.163061 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0777e40a-5848-4ba8-b5fb-d7e2fcceda3b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8ea8bcf460>]}
+[0m21:56:10.164850 [info ] [MainThread]: 
+[0m21:56:10.165704 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m21:56:10.172650 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_steam-outlet-209412'
+[0m21:56:10.173396 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:56:13.353375 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_steam-outlet-209412, now list_steam-outlet-209412_oscreditrisk)
+[0m21:56:13.355292 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m21:56:13.964943 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0777e40a-5848-4ba8-b5fb-d7e2fcceda3b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8ea4ac1220>]}
+[0m21:56:13.965969 [info ] [MainThread]: 
+[0m21:56:13.966622 [info ] [MainThread]: Running 1 on-run-start hook
+[0m21:56:13.989017 [debug] [MainThread]: Writing injected SQL for node "operation.creditrisk.creditrisk-on-run-start-0"
+[0m21:56:13.998106 [info ] [MainThread]: 1 of 1 START hook: creditrisk.on-run-start.0 ................................... [RUN]
+[0m21:56:13.998950 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:56:13.999697 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "creditrisk", "target_name": "dev", "connection_name": "master"} */
+
+
+CREATE SCHEMA IF NOT EXISTS oscreditrisk;
+
+CREATE OR REPLACE FUNCTION oscreditrisk.payment_linearization(
+  payment_amounts ARRAY<FLOAT64>,
+  daily_rate ARRAY<FLOAT64>,
+  reporting_dates ARRAY<STRING>
+)
+
+RETURNS ARRAY<FLOAT64>
+LANGUAGE js AS """
+    let result = [];
+    let balance = 0.0;
+
+    for (let i = 0; i < payment_amounts.length; i++) {
+        if (payment_amounts[i] > 0) {
+            // Add payment to balance
+            balance += payment_amounts[i];
+        }
+
+        if (balance >= daily_rate[i]) {
+            result.push(daily_rate[i]);
+            balance = balance - daily_rate[i];
+        }
+        else if (balance > 0.0) {
+            result.push(balance);
+            balance = 0.0
+        } 
+        else {
+            // Push zero for days with no payment distribution
+            result.push(0.0);
+            balance = 0.0
+        }
+    }
+    return result;
+""";
+  
+
+[0m21:56:14.684531 [debug] [MainThread]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=steam-outlet-209412&j=bq:EU:e90873f5-2da8-461b-92a8-c473c211d9e7&page=queryresults
+[0m21:56:16.217776 [info ] [MainThread]: 1 of 1 OK hook: creditrisk.on-run-start.0 ...................................... [[32mSCRIPT (0 processed)[0m in 2.22s]
+[0m21:56:16.218459 [info ] [MainThread]: 
+[0m21:56:16.219194 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m21:56:16.219698 [info ] [MainThread]: 
+[0m21:56:16.224665 [debug] [Thread-1  ]: Began running node model.creditrisk.accounts_history_beginner
+[0m21:56:16.225831 [info ] [Thread-1  ]: 1 of 2 START sql table model oscreditrisk.accounts_history_beginner ............ [RUN]
+[0m21:56:16.226846 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_steam-outlet-209412_oscreditrisk, now model.creditrisk.accounts_history_beginner)
+[0m21:56:16.227480 [debug] [Thread-1  ]: Began compiling node model.creditrisk.accounts_history_beginner
+[0m21:56:16.234317 [debug] [Thread-1  ]: Writing injected SQL for node "model.creditrisk.accounts_history_beginner"
+[0m21:56:16.235685 [debug] [Thread-1  ]: Began executing node model.creditrisk.accounts_history_beginner
+[0m21:56:16.349065 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m21:56:17.176807 [debug] [Thread-1  ]: Writing runtime sql for node "model.creditrisk.accounts_history_beginner"
+[0m21:56:17.179189 [debug] [Thread-1  ]: On model.creditrisk.accounts_history_beginner: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "creditrisk", "target_name": "dev", "node_id": "model.creditrisk.accounts_history_beginner"} */
+
+  
+    
+
+    create or replace table `steam-outlet-209412`.`oscreditrisk`.`accounts_history_beginner`
+      
+    partition by timestamp_trunc(reporting_date, day)
+    cluster by account_id
+
+    OPTIONS()
+    as (
+      /*
+    This transformations is generating the first version of the core dataset (beginner version). 
+    It is essentially : 
+    - Joining the accounts dataset with a date spine for the target granuarity
+    - Grouping the payment by day, and joining them to the accounts history
+    - Calculating cumulated sums to describe the cumulated amount paid, and a few other useful fields
+*/
+
+
+
+WITH accounts as (
+  SELECT * FROM `steam-outlet-209412`.`oscreditrisk`.`cleaned_accounts`
+),
+
+payments as (
+  SELECT * FROM `steam-outlet-209412`.`oscreditrisk`.`cleaned_payments`
+),
+
+date_spine as (
+  SELECT * FROM `steam-outlet-209412`.`oscreditrisk`.`date_spine`
+),
+
+accounts_with_spine as (
+  SELECT 
+    *,
+    TIMESTAMP_DIFF(reporting_date, registration_date, DAY) + 1 as reporting_day,
+  FROM accounts
+  LEFT JOIN date_spine
+  ON accounts.registration_date <= date_spine.reporting_date
+),
+
+payments_grouped_by_day as (
+  SELECT 
+    account_id,
+    
+    DATE_ADD(
+      DATE_TRUNC(payment_effective_date, DAY), 
+      INTERVAL 1 DAY
+    ) as reporting_date,
+
+    SUM(amount) as amount,
+    SUM(
+      IF(not down_payment, amount, 0)
+    ) as amount_excl_dp,
+
+  FROM payments
+  GROUP BY ALL
+),
+
+joint as (
+  SELECT 
+    * EXCEPT(amount, amount_excl_dp),
+    COALESCE(amount,          0) as amount,
+    COALESCE(amount_excl_dp,  0) as amount_excl_dp,
+  FROM accounts_with_spine 
+  LEFT JOIN payments_grouped_by_day 
+  USING(account_id, reporting_date)
+),
+
+calc_paid_total as (
+  SELECT 
+    *,
+    SUM(amount)         OVER(PARTITION BY account_id ORDER BY reporting_day ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW) as paid_total,
+    SUM(amount_excl_dp) OVER(PARTITION BY account_id ORDER BY reporting_day ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW) as paid_total_excl_dp,
+    
+    SAFE_DIVIDE(unlock_price - down_payment, daily_rate) + down_payment_days_included as nominal_term,
+    SAFE_DIVIDE(unlock_price - down_payment, daily_rate)                              as nominal_term_excl_dp,
+
+    MAX(reporting_day) OVER(PARTITION BY account_id) as account_age_in_days,
+    GREATEST(
+            0,
+            MAX(reporting_day - down_payment_days_included) OVER(PARTITION BY account_id)
+    ) as account_age_excl_dp_in_days,
+
+  FROM joint
+)
+
+SELECT * FROM calc_paid_total
+    );
+  
+[0m21:56:18.066120 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=steam-outlet-209412&j=bq:EU:8fcf6c95-17cb-463a-843f-e958535caad0&page=queryresults
+[0m21:56:45.747266 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0777e40a-5848-4ba8-b5fb-d7e2fcceda3b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8ea214e610>]}
+[0m21:56:45.748425 [info ] [Thread-1  ]: 1 of 2 OK created sql table model oscreditrisk.accounts_history_beginner ....... [[32mCREATE TABLE (3.4m rows, 6.2 MiB processed)[0m in 29.52s]
+[0m21:56:45.749521 [debug] [Thread-1  ]: Finished running node model.creditrisk.accounts_history_beginner
+[0m21:56:45.750746 [debug] [Thread-1  ]: Began running node model.creditrisk.accounts_history_advanced
+[0m21:56:45.751582 [info ] [Thread-1  ]: 2 of 2 START sql table model oscreditrisk.accounts_history_advanced ............ [RUN]
+[0m21:56:45.752303 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.creditrisk.accounts_history_beginner, now model.creditrisk.accounts_history_advanced)
+[0m21:56:45.752883 [debug] [Thread-1  ]: Began compiling node model.creditrisk.accounts_history_advanced
+[0m21:56:45.759519 [debug] [Thread-1  ]: Writing injected SQL for node "model.creditrisk.accounts_history_advanced"
+[0m21:56:45.761383 [debug] [Thread-1  ]: Began executing node model.creditrisk.accounts_history_advanced
+[0m21:56:45.765215 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m21:56:46.356907 [debug] [Thread-1  ]: Writing runtime sql for node "model.creditrisk.accounts_history_advanced"
+[0m21:56:46.359943 [debug] [Thread-1  ]: On model.creditrisk.accounts_history_advanced: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "creditrisk", "target_name": "dev", "node_id": "model.creditrisk.accounts_history_advanced"} */
+
+  
+    
+
+    create or replace table `steam-outlet-209412`.`oscreditrisk`.`accounts_history_advanced`
+      
+    partition by timestamp_trunc(reporting_date, day)
+    cluster by account_id
+
+    OPTIONS()
+    as (
+      /*
+    This transformations is generating the second version of the core dataset (advanced version)
+    The main complexity lies in the fact that SQL is not sufficient to calculate the linearized payments. 
+    We thus need to use a User Defined Function (here in Javascript) - but we could also use another programming language. 
+*/
+
+
+
+WITH accounts_history as (
+    SELECT * FROM `steam-outlet-209412`.`oscreditrisk`.`accounts_history_beginner`
+),
+
+additional_kpis as (
+    SELECT 
+        *,
+        
+        CASE 
+            WHEN reporting_day <= down_payment_days_included THEN Null
+            WHEN reporting_day = down_payment_days_included + 1 THEN paid_total
+            ELSE amount_excl_dp
+        END as amount_excl_dp_period, -- This step is necessary to 'record' payments at the end of the downpayment period.
+
+        CASE  
+            WHEN reporting_day < down_payment_days_included THEN Null
+            WHEN reporting_day >= down_payment_days_included THEN reporting_day - down_payment_days_included
+        END as reporting_day_excl_dp, -- Necessary to remove the downpayment period from analyses
+
+    FROM accounts_history
+),
+
+-- Preparing the data for the UDF (consuming arrays)
+prepared_for_udf as (
+    SELECT
+        account_id,
+        ARRAY_AGG(COALESCE(amount_excl_dp_period, 0)     ORDER BY reporting_day) as payment_amounts,
+        ARRAY_AGG(daily_rate                             ORDER BY reporting_day) as daily_rates,
+        ARRAY_AGG(CAST(DATE(reporting_date) as STRING)   ORDER BY reporting_day) as casted_reporting_dates,
+    FROM additional_kpis
+    GROUP BY ALL
+),
+
+-- applying the UDF on prepared data format
+apply_udf AS (
+    SELECT 
+        *,
+        oscreditrisk.payment_linearization(
+        prepared_for_udf.payment_amounts, 
+        prepared_for_udf.daily_rates, 
+        prepared_for_udf.casted_reporting_dates
+        ) as payment_amount_lin_excl_dp
+    FROM prepared_for_udf
+),
+
+-- Expanding the results before joining them back
+expand_udf_result AS (
+    SELECT
+        account_id,
+        CAST(reporting_date AS TIMESTAMP) as reporting_date,
+        amount_lin
+    FROM
+        apply_udf,
+        UNNEST(apply_udf.casted_reporting_dates)            AS reporting_date   WITH OFFSET AS pos
+    JOIN UNNEST(apply_udf.payment_amount_lin_excl_dp)     AS amount_lin       WITH OFFSET AS val_pos
+    ON pos = val_pos
+),
+
+join_back_on_dataset as (
+    SELECT 
+        *,
+        SUM(amount_lin) OVER(PARTITION BY account_id ORDER BY reporting_day ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW) as paid_total_lin,
+        IF(
+            amount_lin = 0 AND LAG(amount_lin) OVER(PARTITION BY account_id ORDER BY reporting_day) > 0,
+            reporting_date,
+            Null
+        ) as last_disablement,
+    FROM additional_kpis 
+    LEFT JOIN expand_udf_result USING(account_id, reporting_date)
+),
+
+-- As a last step, use this information to calculate useful fields: status and number of days disabled.
+final_kpis as (
+  SELECT 
+    *,
+    CASE 
+        WHEN reporting_day <= down_payment_days_included THEN 'ENABLED'
+        WHEN paid_total >= unlock_price THEN 'UNLOCKED'
+        WHEN amount_lin > 0   THEN 'ENABLED'
+        WHEN amount_lin <= 0  THEN 'DISABLED'
+    END as reporting_date_status,
+    CASE 
+        WHEN amount_lin = 0 
+        THEN DATE_DIFF(
+            reporting_date, 
+            LAST_VALUE(last_disablement IGNORE NULLS) OVER(PARTITION BY account_id ORDER BY reporting_day),
+            DAY
+        ) 
+    END as days_disabled,
+  FROM join_back_on_dataset
+)
+
+SELECT * FROM final_kpis
+    );
+  
+[0m21:56:46.835736 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=steam-outlet-209412&j=bq:EU:1fa43142-49ea-4b64-babf-8785a0fab5aa&page=queryresults
+[0m21:57:27.083605 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0777e40a-5848-4ba8-b5fb-d7e2fcceda3b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8ea9579790>]}
+[0m21:57:27.085339 [info ] [Thread-1  ]: 2 of 2 OK created sql table model oscreditrisk.accounts_history_advanced ....... [[32mCREATE TABLE (3.4m rows, 409.2 MiB processed)[0m in 41.33s]
+[0m21:57:27.086344 [debug] [Thread-1  ]: Finished running node model.creditrisk.accounts_history_advanced
+[0m21:57:27.087930 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:57:27.088407 [debug] [MainThread]: Connection 'model.creditrisk.accounts_history_advanced' was properly closed.
+[0m21:57:27.088988 [info ] [MainThread]: 
+[0m21:57:27.089532 [info ] [MainThread]: Finished running 2 table models, 1 project hook in 0 hours 1 minutes and 16.92 seconds (76.92s).
+[0m21:57:27.090918 [debug] [MainThread]: Command end result
+[0m21:57:27.153535 [info ] [MainThread]: 
+[0m21:57:27.154344 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m21:57:27.154891 [info ] [MainThread]: 
+[0m21:57:27.155597 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[0m21:57:27.156639 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 82.7419, "process_user_time": 6.214898, "process_kernel_time": 1.23674, "process_mem_max_rss": "228462592", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m21:57:27.158277 [debug] [MainThread]: Command `dbt run` succeeded at 21:57:27.158059 after 82.74 seconds
+[0m21:57:27.158988 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8ea2a32550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8ea4295790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8ea4975e80>]}
+[0m21:57:27.159603 [debug] [MainThread]: Flushing usage events
+[0m21:58:28.984031 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9954a275b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9956914700>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9956914520>]}
+
+
+============================== 21:58:28.989926 | 822b9d7d-9f37-44ad-bb22-4839daa69898 ==============================
+[0m21:58:28.989926 [info ] [MainThread]: Running with dbt=1.8.8
+[0m21:58:28.990943 [debug] [MainThread]: running dbt with arguments {'cache_selected_only': 'False', 'write_json': 'True', 'invocation_command': 'dbt run --select cohorts_beginner', 'introspect': 'True', 'use_colors': 'True', 'no_print': 'None', 'target_path': 'None', 'log_cache_events': 'False', 'printer_width': '80', 'debug': 'False', 'warn_error': 'None', 'static_parser': 'True', 'indirect_selection': 'eager', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'version_check': 'True', 'log_format': 'default', 'empty': 'False', 'profiles_dir': '/Users/david/.dbt', 'partial_parse': 'True', 'use_experimental_parser': 'False', 'log_path': '/Users/david/bbplus-os-credit-risk/bbplus-os-credit-risk/logs', 'fail_fast': 'False', 'quiet': 'False', 'send_anonymous_usage_stats': 'True'}
+[0m21:58:33.688247 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '822b9d7d-9f37-44ad-bb22-4839daa69898', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f995a4cf910>]}
+[0m21:58:33.769223 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '822b9d7d-9f37-44ad-bb22-4839daa69898', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9956738100>]}
+[0m21:58:33.770609 [info ] [MainThread]: Registered adapter: bigquery=1.8.3
+[0m21:58:33.805338 [debug] [MainThread]: checksum: ec53e341a936509427e16df1c646386a84befec52c1957e3f4359fbc36fc93f5, vars: {}, profile: , target: , version: 1.8.8
+[0m21:58:34.239643 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m21:58:34.240355 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m21:58:34.355424 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '822b9d7d-9f37-44ad-bb22-4839daa69898', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f995af40ee0>]}
+[0m21:58:34.841104 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '822b9d7d-9f37-44ad-bb22-4839daa69898', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f995af636d0>]}
+[0m21:58:34.842092 [info ] [MainThread]: Found 6 models, 2 seeds, 1 operation, 480 macros
+[0m21:58:34.843399 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '822b9d7d-9f37-44ad-bb22-4839daa69898', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f995af8c550>]}
+[0m21:58:34.845622 [info ] [MainThread]: 
+[0m21:58:34.846780 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m21:58:34.848408 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_steam-outlet-209412'
+[0m21:58:34.850784 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:58:37.974974 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_steam-outlet-209412, now list_steam-outlet-209412_oscreditrisk)
+[0m21:58:37.976131 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m21:58:38.578510 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '822b9d7d-9f37-44ad-bb22-4839daa69898', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f995ac389a0>]}
+[0m21:58:38.579489 [info ] [MainThread]: 
+[0m21:58:38.580144 [info ] [MainThread]: Running 1 on-run-start hook
+[0m21:58:38.602022 [debug] [MainThread]: Writing injected SQL for node "operation.creditrisk.creditrisk-on-run-start-0"
+[0m21:58:38.610357 [info ] [MainThread]: 1 of 1 START hook: creditrisk.on-run-start.0 ................................... [RUN]
+[0m21:58:38.612296 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:58:38.613323 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "creditrisk", "target_name": "dev", "connection_name": "master"} */
+
+
+CREATE SCHEMA IF NOT EXISTS oscreditrisk;
+
+CREATE OR REPLACE FUNCTION oscreditrisk.payment_linearization(
+  payment_amounts ARRAY<FLOAT64>,
+  daily_rate ARRAY<FLOAT64>,
+  reporting_dates ARRAY<STRING>
+)
+
+RETURNS ARRAY<FLOAT64>
+LANGUAGE js AS """
+    let result = [];
+    let balance = 0.0;
+
+    for (let i = 0; i < payment_amounts.length; i++) {
+        if (payment_amounts[i] > 0) {
+            // Add payment to balance
+            balance += payment_amounts[i];
+        }
+
+        if (balance >= daily_rate[i]) {
+            result.push(daily_rate[i]);
+            balance = balance - daily_rate[i];
+        }
+        else if (balance > 0.0) {
+            result.push(balance);
+            balance = 0.0
+        } 
+        else {
+            // Push zero for days with no payment distribution
+            result.push(0.0);
+            balance = 0.0
+        }
+    }
+    return result;
+""";
+  
+
+[0m21:58:39.287975 [debug] [MainThread]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=steam-outlet-209412&j=bq:EU:e301fcd7-fe4b-428b-b6ec-fab4a14e22cb&page=queryresults
+[0m21:58:40.667526 [info ] [MainThread]: 1 of 1 OK hook: creditrisk.on-run-start.0 ...................................... [[32mSCRIPT (0 processed)[0m in 2.06s]
+[0m21:58:40.668416 [info ] [MainThread]: 
+[0m21:58:40.669359 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m21:58:40.670118 [info ] [MainThread]: 
+[0m21:58:40.675026 [debug] [Thread-1  ]: Began running node model.creditrisk.cohorts_beginner
+[0m21:58:40.676306 [info ] [Thread-1  ]: 1 of 1 START sql view model oscreditrisk.cohorts_beginner ...................... [RUN]
+[0m21:58:40.677263 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_steam-outlet-209412_oscreditrisk, now model.creditrisk.cohorts_beginner)
+[0m21:58:40.678144 [debug] [Thread-1  ]: Began compiling node model.creditrisk.cohorts_beginner
+[0m21:58:40.685955 [debug] [Thread-1  ]: Writing injected SQL for node "model.creditrisk.cohorts_beginner"
+[0m21:58:40.687498 [debug] [Thread-1  ]: Began executing node model.creditrisk.cohorts_beginner
+[0m21:58:40.752806 [debug] [Thread-1  ]: Writing runtime sql for node "model.creditrisk.cohorts_beginner"
+[0m21:58:40.754206 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m21:58:40.755017 [debug] [Thread-1  ]: On model.creditrisk.cohorts_beginner: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "creditrisk", "target_name": "dev", "node_id": "model.creditrisk.cohorts_beginner"} */
+
+
+  create or replace view `steam-outlet-209412`.`oscreditrisk`.`cohorts_beginner`
+  OPTIONS()
+  as /*
+    This transformations is aggregating on a cohort level for visualisation.
+    It uses the beginner core dataset, and produces information on raw payments only.
+*/
+
+WITH accounts_history as (
+    SELECT * FROM `steam-outlet-209412`.`oscreditrisk`.`accounts_history_beginner`
+)
+
+WITH cohort_calc as (
+    SELECT 
+        *,
+        DATE_TRUNC(registration_date, MONTH) as cohort, -- possible to change here to quarter or year
+    FROM accounts_history
+),
+
+filtered as (
+    SELECT 
+        * 
+    FROM cohort_calc
+    WHERE  MOD(reporting_day, 30) = 1 -- optional : downsampling results to 1 point every 30 days. Often sufficient.
+    QUALIFY reporting_day <= MIN(account_age_in_days) OVER(PARTITION BY cohort) -- removes the end of cohorts where calculation is not representative of the whole cohort
+)
+
+SELECT 
+    cohort,
+    reporting_day,
+    SUM(paid_total) / SUM(unlock_price) as amount_paid_percent,
+FROM filtered
+GROUP BY ALL;
+
+
+[0m21:58:41.359973 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=steam-outlet-209412&j=bq:EU:b5910793-7400-4839-894a-061de7ecdd43&page=queryresults
+[0m21:58:41.360966 [debug] [Thread-1  ]: BigQuery adapter: Retry attempt 1 of 1 after error: BadRequest('Syntax error: Expected keyword DEPTH but got identifier "cohort_calc" at [15:6]; reason: invalidQuery, location: query, message: Syntax error: Expected keyword DEPTH but got identifier "cohort_calc" at [15:6]')
+[0m21:58:42.488786 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=steam-outlet-209412&j=bq:EU:ac3dd213-96ec-44fe-ade8-0b333d2a8aa6&page=queryresults
+[0m21:58:42.489702 [error] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=steam-outlet-209412&j=bq:EU:ac3dd213-96ec-44fe-ade8-0b333d2a8aa6&page=queryresults
+[0m21:58:42.505726 [debug] [Thread-1  ]: Database Error in model cohorts_beginner (models/example/2_cohort_visualizations/cohorts_beginner.sql)
+  Syntax error: Expected keyword DEPTH but got identifier "cohort_calc" at [15:6]
+  compiled code at target/run/creditrisk/models/example/2_cohort_visualizations/cohorts_beginner.sql
+[0m21:58:42.508167 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '822b9d7d-9f37-44ad-bb22-4839daa69898', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f995b5c0fd0>]}
+[0m21:58:42.509186 [error] [Thread-1  ]: 1 of 1 ERROR creating sql view model oscreditrisk.cohorts_beginner ............. [[31mERROR[0m in 1.83s]
+[0m21:58:42.510445 [debug] [Thread-1  ]: Finished running node model.creditrisk.cohorts_beginner
+[0m21:58:42.512647 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:58:42.513211 [debug] [MainThread]: Connection 'model.creditrisk.cohorts_beginner' was properly closed.
+[0m21:58:42.513738 [info ] [MainThread]: 
+[0m21:58:42.515483 [info ] [MainThread]: Finished running 1 view model, 1 project hook in 0 hours 0 minutes and 7.67 seconds (7.67s).
+[0m21:58:42.518657 [debug] [MainThread]: Command end result
+[0m21:58:42.591554 [info ] [MainThread]: 
+[0m21:58:42.592516 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m21:58:42.593193 [info ] [MainThread]: 
+[0m21:58:42.594349 [error] [MainThread]:   Database Error in model cohorts_beginner (models/example/2_cohort_visualizations/cohorts_beginner.sql)
+  Syntax error: Expected keyword DEPTH but got identifier "cohort_calc" at [15:6]
+  compiled code at target/run/creditrisk/models/example/2_cohort_visualizations/cohorts_beginner.sql
+[0m21:58:42.595417 [info ] [MainThread]: 
+[0m21:58:42.596939 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+[0m21:58:42.598328 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 13.72227, "process_user_time": 6.338119, "process_kernel_time": 1.231299, "process_mem_max_rss": "227721216", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m21:58:42.599480 [debug] [MainThread]: Command `dbt run` failed at 21:58:42.599272 after 13.72 seconds
+[0m21:58:42.600211 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9954a275b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9954d528e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f99560c97f0>]}
+[0m21:58:42.600866 [debug] [MainThread]: Flushing usage events
+[0m22:00:42.181836 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd81422f5b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd816272d90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd8162723d0>]}
+
+
+============================== 22:00:42.186994 | f5a9283c-007e-4003-9f29-0d7e4fbfb5e7 ==============================
+[0m22:00:42.186994 [info ] [MainThread]: Running with dbt=1.8.8
+[0m22:00:42.188122 [debug] [MainThread]: running dbt with arguments {'log_format': 'default', 'printer_width': '80', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'warn_error': 'None', 'debug': 'False', 'no_print': 'None', 'send_anonymous_usage_stats': 'True', 'log_path': '/Users/david/bbplus-os-credit-risk/bbplus-os-credit-risk/logs', 'use_experimental_parser': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'version_check': 'True', 'quiet': 'False', 'write_json': 'True', 'partial_parse': 'True', 'invocation_command': 'dbt run --select 2+cohorts_beginner', 'profiles_dir': '/Users/david/.dbt', 'use_colors': 'True', 'cache_selected_only': 'False', 'empty': 'False', 'fail_fast': 'False', 'log_cache_events': 'False', 'indirect_selection': 'eager'}
+[0m22:00:47.593436 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'f5a9283c-007e-4003-9f29-0d7e4fbfb5e7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd8161f99a0>]}
+[0m22:00:47.672980 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'f5a9283c-007e-4003-9f29-0d7e4fbfb5e7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd81a416910>]}
+[0m22:00:47.673950 [info ] [MainThread]: Registered adapter: bigquery=1.8.3
+[0m22:00:47.711761 [debug] [MainThread]: checksum: ec53e341a936509427e16df1c646386a84befec52c1957e3f4359fbc36fc93f5, vars: {}, profile: , target: , version: 1.8.8
+[0m22:00:48.129106 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m22:00:48.129710 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m22:00:48.239092 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'f5a9283c-007e-4003-9f29-0d7e4fbfb5e7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd81a840ee0>]}
+[0m22:00:48.542720 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'f5a9283c-007e-4003-9f29-0d7e4fbfb5e7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd81a862550>]}
+[0m22:00:48.544448 [info ] [MainThread]: Found 6 models, 2 seeds, 1 operation, 480 macros
+[0m22:00:48.545401 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f5a9283c-007e-4003-9f29-0d7e4fbfb5e7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd81a88d7c0>]}
+[0m22:00:48.548563 [info ] [MainThread]: 
+[0m22:00:48.550121 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m22:00:48.560429 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_steam-outlet-209412'
+[0m22:00:48.562288 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:00:52.311915 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_steam-outlet-209412, now list_steam-outlet-209412_oscreditrisk)
+[0m22:00:52.313638 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m22:00:52.910001 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f5a9283c-007e-4003-9f29-0d7e4fbfb5e7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd81a4c6c40>]}
+[0m22:00:52.911327 [info ] [MainThread]: 
+[0m22:00:52.912105 [info ] [MainThread]: Running 1 on-run-start hook
+[0m22:00:52.932512 [debug] [MainThread]: Writing injected SQL for node "operation.creditrisk.creditrisk-on-run-start-0"
+[0m22:00:52.939459 [info ] [MainThread]: 1 of 1 START hook: creditrisk.on-run-start.0 ................................... [RUN]
+[0m22:00:52.940510 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m22:00:52.941911 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "creditrisk", "target_name": "dev", "connection_name": "master"} */
+
+
+CREATE SCHEMA IF NOT EXISTS oscreditrisk;
+
+CREATE OR REPLACE FUNCTION oscreditrisk.payment_linearization(
+  payment_amounts ARRAY<FLOAT64>,
+  daily_rate ARRAY<FLOAT64>,
+  reporting_dates ARRAY<STRING>
+)
+
+RETURNS ARRAY<FLOAT64>
+LANGUAGE js AS """
+    let result = [];
+    let balance = 0.0;
+
+    for (let i = 0; i < payment_amounts.length; i++) {
+        if (payment_amounts[i] > 0) {
+            // Add payment to balance
+            balance += payment_amounts[i];
+        }
+
+        if (balance >= daily_rate[i]) {
+            result.push(daily_rate[i]);
+            balance = balance - daily_rate[i];
+        }
+        else if (balance > 0.0) {
+            result.push(balance);
+            balance = 0.0
+        } 
+        else {
+            // Push zero for days with no payment distribution
+            result.push(0.0);
+            balance = 0.0
+        }
+    }
+    return result;
+""";
+  
+
+[0m22:00:53.561821 [debug] [MainThread]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=steam-outlet-209412&j=bq:EU:897fefa5-ffe6-4d3d-8415-4b5afa158cb7&page=queryresults
+[0m22:00:55.031079 [info ] [MainThread]: 1 of 1 OK hook: creditrisk.on-run-start.0 ...................................... [[32mSCRIPT (0 processed)[0m in 2.09s]
+[0m22:00:55.032531 [info ] [MainThread]: 
+[0m22:00:55.034210 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m22:00:55.035110 [info ] [MainThread]: 
+[0m22:00:55.044876 [debug] [Thread-1  ]: Began running node model.creditrisk.cleaned_accounts
+[0m22:00:55.046815 [info ] [Thread-1  ]: 1 of 5 START sql view model oscreditrisk.cleaned_accounts ...................... [RUN]
+[0m22:00:55.048235 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_steam-outlet-209412_oscreditrisk, now model.creditrisk.cleaned_accounts)
+[0m22:00:55.049254 [debug] [Thread-1  ]: Began compiling node model.creditrisk.cleaned_accounts
+[0m22:00:55.057847 [debug] [Thread-1  ]: Writing injected SQL for node "model.creditrisk.cleaned_accounts"
+[0m22:00:55.062339 [debug] [Thread-1  ]: Began executing node model.creditrisk.cleaned_accounts
+[0m22:00:55.145865 [debug] [Thread-1  ]: Writing runtime sql for node "model.creditrisk.cleaned_accounts"
+[0m22:00:55.147136 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m22:00:55.148146 [debug] [Thread-1  ]: On model.creditrisk.cleaned_accounts: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "creditrisk", "target_name": "dev", "node_id": "model.creditrisk.cleaned_accounts"} */
+
+
+  create or replace view `steam-outlet-209412`.`oscreditrisk`.`cleaned_accounts`
+  OPTIONS()
+  as /*
+    This transformations is just casting fields in the right format. 
+    In practice, you may add here filtering steps to reduce your data to relevant records.
+*/
+
+WITH accounts as (
+    SELECT * FROM `steam-outlet-209412`.`oscreditrisk`.`raw_accounts`
+)
+
+SELECT 
+  account_id, 
+  CAST(registration_date            AS TIMESTAMP)     as registration_date, 
+  CAST(unlock_price                 AS FLOAT64)       as unlock_price, 
+  CAST(down_payment                 AS FLOAT64)       as down_payment, 
+  CAST(down_payment_days_included   AS FLOAT64)       as down_payment_days_included, 
+  CAST(daily_rate                   AS FLOAT64)       as daily_rate, 
+FROM accounts;
+
+
+[0m22:00:55.952166 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=steam-outlet-209412&j=bq:EU:5413b627-6dd2-4dc2-b416-4bba26180719&page=queryresults
+[0m22:00:56.620244 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f5a9283c-007e-4003-9f29-0d7e4fbfb5e7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd819d14610>]}
+[0m22:00:56.621384 [info ] [Thread-1  ]: 1 of 5 OK created sql view model oscreditrisk.cleaned_accounts ................. [[32mCREATE VIEW (0 processed)[0m in 1.57s]
+[0m22:00:56.622526 [debug] [Thread-1  ]: Finished running node model.creditrisk.cleaned_accounts
+[0m22:00:56.623341 [debug] [Thread-1  ]: Began running node model.creditrisk.cleaned_payments
+[0m22:00:56.624232 [info ] [Thread-1  ]: 2 of 5 START sql view model oscreditrisk.cleaned_payments ...................... [RUN]
+[0m22:00:56.624962 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.creditrisk.cleaned_accounts, now model.creditrisk.cleaned_payments)
+[0m22:00:56.625547 [debug] [Thread-1  ]: Began compiling node model.creditrisk.cleaned_payments
+[0m22:00:56.635945 [debug] [Thread-1  ]: Writing injected SQL for node "model.creditrisk.cleaned_payments"
+[0m22:00:56.637852 [debug] [Thread-1  ]: Began executing node model.creditrisk.cleaned_payments
+[0m22:00:56.642619 [debug] [Thread-1  ]: Writing runtime sql for node "model.creditrisk.cleaned_payments"
+[0m22:00:56.643879 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m22:00:56.644662 [debug] [Thread-1  ]: On model.creditrisk.cleaned_payments: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "creditrisk", "target_name": "dev", "node_id": "model.creditrisk.cleaned_payments"} */
+
+
+  create or replace view `steam-outlet-209412`.`oscreditrisk`.`cleaned_payments`
+  OPTIONS()
+  as /*
+    This transformations is just casting fields in the right format. 
+    In practice, you may add here filtering steps to reduce your data to relevant records.
+*/
+
+WITH payments as (
+    SELECT * FROM `steam-outlet-209412`.`oscreditrisk`.`raw_payments`
+)
+
+SELECT 
+  account_id,
+  CAST(down_payment             AS BOOLEAN)         as down_payment,
+  CAST(payment_effective_date   AS TIMESTAMP)       as payment_effective_date,
+  CAST(amount                   AS FLOAT64)         as amount,
+FROM payments;
+
+
+[0m22:00:57.561308 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=steam-outlet-209412&j=bq:EU:efac34a0-117c-4276-940a-035305251da5&page=queryresults
+[0m22:00:58.190425 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f5a9283c-007e-4003-9f29-0d7e4fbfb5e7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd81b0461c0>]}
+[0m22:00:58.192158 [info ] [Thread-1  ]: 2 of 5 OK created sql view model oscreditrisk.cleaned_payments ................. [[32mCREATE VIEW (0 processed)[0m in 1.57s]
+[0m22:00:58.193737 [debug] [Thread-1  ]: Finished running node model.creditrisk.cleaned_payments
+[0m22:00:58.195643 [debug] [Thread-1  ]: Began running node model.creditrisk.date_spine
+[0m22:00:58.196998 [info ] [Thread-1  ]: 3 of 5 START sql view model oscreditrisk.date_spine ............................ [RUN]
+[0m22:00:58.199608 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.creditrisk.cleaned_payments, now model.creditrisk.date_spine)
+[0m22:00:58.202728 [debug] [Thread-1  ]: Began compiling node model.creditrisk.date_spine
+[0m22:00:58.217724 [debug] [Thread-1  ]: Writing injected SQL for node "model.creditrisk.date_spine"
+[0m22:00:58.220173 [debug] [Thread-1  ]: Began executing node model.creditrisk.date_spine
+[0m22:00:58.232799 [debug] [Thread-1  ]: Writing runtime sql for node "model.creditrisk.date_spine"
+[0m22:00:58.234426 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m22:00:58.235873 [debug] [Thread-1  ]: On model.creditrisk.date_spine: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "creditrisk", "target_name": "dev", "node_id": "model.creditrisk.date_spine"} */
+
+
+  create or replace view `steam-outlet-209412`.`oscreditrisk`.`date_spine`
+  OPTIONS()
+  as /*
+    This transformations is generating a dataset containing one row for each day betwee : 
+    - The first day you opened an account
+    - Today. With artificial data here we consider today being the day after we received the last payment.
+*/
+
+WITH payments as (
+    SELECT * FROM `steam-outlet-209412`.`oscreditrisk`.`cleaned_payments`
+),
+
+min_max_dates as (
+    SELECT 
+        CAST(MIN(payment_effective_date)            AS DATE)                    as min_date,
+        DATE_ADD(CAST(MAX(payment_effective_date)   AS DATE), INTERVAL 1 DAY)   as max_date,
+    FROM payments
+)
+
+SELECT
+    CAST(
+        TIMESTAMP_ADD(
+            (SELECT min_date FROM min_max_dates), 
+            INTERVAL n DAY
+        ) AS TIMESTAMP
+    ) AS reporting_date,
+FROM 
+  UNNEST(
+    GENERATE_ARRAY(
+        0, 
+        DATE_DIFF(
+            (SELECT max_date FROM min_max_dates),
+            (SELECT min_date FROM min_max_dates),
+            DAY
+        )
+    )
+) AS n;
+
+
+[0m22:00:59.211889 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=steam-outlet-209412&j=bq:EU:b370ee4d-5333-4ea3-a2c6-4cb63d522163&page=queryresults
+[0m22:00:59.826188 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f5a9283c-007e-4003-9f29-0d7e4fbfb5e7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd81aeb83a0>]}
+[0m22:00:59.827265 [info ] [Thread-1  ]: 3 of 5 OK created sql view model oscreditrisk.date_spine ....................... [[32mCREATE VIEW (0 processed)[0m in 1.63s]
+[0m22:00:59.829146 [debug] [Thread-1  ]: Finished running node model.creditrisk.date_spine
+[0m22:00:59.831638 [debug] [Thread-1  ]: Began running node model.creditrisk.accounts_history_beginner
+[0m22:00:59.833976 [info ] [Thread-1  ]: 4 of 5 START sql table model oscreditrisk.accounts_history_beginner ............ [RUN]
+[0m22:00:59.835508 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.creditrisk.date_spine, now model.creditrisk.accounts_history_beginner)
+[0m22:00:59.836584 [debug] [Thread-1  ]: Began compiling node model.creditrisk.accounts_history_beginner
+[0m22:00:59.851179 [debug] [Thread-1  ]: Writing injected SQL for node "model.creditrisk.accounts_history_beginner"
+[0m22:00:59.852503 [debug] [Thread-1  ]: Began executing node model.creditrisk.accounts_history_beginner
+[0m22:00:59.899646 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m22:01:00.604829 [debug] [Thread-1  ]: Writing runtime sql for node "model.creditrisk.accounts_history_beginner"
+[0m22:01:00.606220 [debug] [Thread-1  ]: On model.creditrisk.accounts_history_beginner: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "creditrisk", "target_name": "dev", "node_id": "model.creditrisk.accounts_history_beginner"} */
+
+  
+    
+
+    create or replace table `steam-outlet-209412`.`oscreditrisk`.`accounts_history_beginner`
+      
+    partition by timestamp_trunc(reporting_date, day)
+    cluster by account_id
+
+    OPTIONS()
+    as (
+      /*
+    This transformations is generating the first version of the core dataset (beginner version). 
+    It is essentially : 
+    - Joining the accounts dataset with a date spine for the target granuarity
+    - Grouping the payment by day, and joining them to the accounts history
+    - Calculating cumulated sums to describe the cumulated amount paid, and a few other useful fields
+*/
+
+
+
+WITH accounts as (
+  SELECT * FROM `steam-outlet-209412`.`oscreditrisk`.`cleaned_accounts`
+),
+
+payments as (
+  SELECT * FROM `steam-outlet-209412`.`oscreditrisk`.`cleaned_payments`
+),
+
+date_spine as (
+  SELECT * FROM `steam-outlet-209412`.`oscreditrisk`.`date_spine`
+),
+
+accounts_with_spine as (
+  SELECT 
+    *,
+    TIMESTAMP_DIFF(reporting_date, registration_date, DAY) + 1 as reporting_day,
+  FROM accounts
+  LEFT JOIN date_spine
+  ON accounts.registration_date <= date_spine.reporting_date
+),
+
+payments_grouped_by_day as (
+  SELECT 
+    account_id,
+    
+    DATE_ADD(
+      DATE_TRUNC(payment_effective_date, DAY), 
+      INTERVAL 1 DAY
+    ) as reporting_date,
+
+    SUM(amount) as amount,
+    SUM(
+      IF(not down_payment, amount, 0)
+    ) as amount_excl_dp,
+
+  FROM payments
+  GROUP BY ALL
+),
+
+joint as (
+  SELECT 
+    * EXCEPT(amount, amount_excl_dp),
+    COALESCE(amount,          0) as amount,
+    COALESCE(amount_excl_dp,  0) as amount_excl_dp,
+  FROM accounts_with_spine 
+  LEFT JOIN payments_grouped_by_day 
+  USING(account_id, reporting_date)
+),
+
+calc_paid_total as (
+  SELECT 
+    *,
+    SUM(amount)         OVER(PARTITION BY account_id ORDER BY reporting_day ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW) as paid_total,
+    SUM(amount_excl_dp) OVER(PARTITION BY account_id ORDER BY reporting_day ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW) as paid_total_excl_dp,
+    
+    SAFE_DIVIDE(unlock_price - down_payment, daily_rate) + down_payment_days_included as nominal_term,
+    SAFE_DIVIDE(unlock_price - down_payment, daily_rate)                              as nominal_term_excl_dp,
+
+    MAX(reporting_day) OVER(PARTITION BY account_id) as account_age_in_days,
+    GREATEST(
+            0,
+            MAX(reporting_day - down_payment_days_included) OVER(PARTITION BY account_id)
+    ) as account_age_excl_dp_in_days,
+
+    DATE_TRUNC(registration_date, MONTH) as cohort_month,
+    DATE_TRUNC(registration_date, QUARTER) as cohort_quarter,
+    DATE_TRUNC(registration_date, YEAR) as cohort_year,
+
+  FROM joint
+)
+
+SELECT * FROM calc_paid_total
+    );
+  
+[0m22:01:01.305138 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=steam-outlet-209412&j=bq:EU:927294eb-71f1-4df2-bb6d-18bb55752efd&page=queryresults
+[0m22:01:28.053349 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f5a9283c-007e-4003-9f29-0d7e4fbfb5e7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd819d14610>]}
+[0m22:01:28.054796 [info ] [Thread-1  ]: 4 of 5 OK created sql table model oscreditrisk.accounts_history_beginner ....... [[32mCREATE TABLE (3.4m rows, 6.2 MiB processed)[0m in 28.22s]
+[0m22:01:28.056916 [debug] [Thread-1  ]: Finished running node model.creditrisk.accounts_history_beginner
+[0m22:01:28.058993 [debug] [Thread-1  ]: Began running node model.creditrisk.cohorts_beginner
+[0m22:01:28.062143 [info ] [Thread-1  ]: 5 of 5 START sql view model oscreditrisk.cohorts_beginner ...................... [RUN]
+[0m22:01:28.064695 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.creditrisk.accounts_history_beginner, now model.creditrisk.cohorts_beginner)
+[0m22:01:28.066044 [debug] [Thread-1  ]: Began compiling node model.creditrisk.cohorts_beginner
+[0m22:01:28.119909 [debug] [Thread-1  ]: Writing injected SQL for node "model.creditrisk.cohorts_beginner"
+[0m22:01:28.133957 [debug] [Thread-1  ]: Began executing node model.creditrisk.cohorts_beginner
+[0m22:01:28.147567 [debug] [Thread-1  ]: Writing runtime sql for node "model.creditrisk.cohorts_beginner"
+[0m22:01:28.150506 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m22:01:28.154504 [debug] [Thread-1  ]: On model.creditrisk.cohorts_beginner: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "creditrisk", "target_name": "dev", "node_id": "model.creditrisk.cohorts_beginner"} */
+
+
+  create or replace view `steam-outlet-209412`.`oscreditrisk`.`cohorts_beginner`
+  OPTIONS()
+  as /*
+    This transformations is aggregating on a cohort level for visualisation.
+    It uses the beginner core dataset, and produces information on raw payments only.
+*/
+
+WITH accounts_history as (
+    SELECT * FROM `steam-outlet-209412`.`oscreditrisk`.`accounts_history_beginner`
+),
+
+filtered as (
+    SELECT 
+        * 
+    FROM cohort_calc
+    -- optional : downsampling results to 1 point every 30 days. Often sufficient.
+    WHERE  MOD(reporting_day, 30) = 1 
+    -- removing the end of cohorts where calculation is not representative of the whole cohort
+    QUALIFY reporting_day <= MIN(account_age_in_days) OVER(PARTITION BY cohort_month) 
+)
+
+-- Aggregating results on a cohort level
+SELECT 
+    cohort,
+    reporting_day,
+    SUM(paid_total) / SUM(unlock_price) as amount_paid_percent,
+FROM filtered
+GROUP BY ALL;
+
+
+[0m22:01:29.034283 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=steam-outlet-209412&j=bq:EU:24220f32-9639-4207-8c91-82cb9bd49f29&page=queryresults
+[0m22:01:29.082582 [debug] [Thread-1  ]: BigQuery adapter: Retry attempt 1 of 1 after error: BadRequest('Table "cohort_calc" must be qualified with a dataset (e.g. dataset.table).; reason: invalid, location: cohort_calc, message: Table "cohort_calc" must be qualified with a dataset (e.g. dataset.table).')
+[0m22:01:30.040062 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=steam-outlet-209412&j=bq:EU:df58da3f-df47-4d5f-8cfc-b441da72ecdb&page=queryresults
+[0m22:01:30.041284 [error] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=steam-outlet-209412&j=bq:EU:df58da3f-df47-4d5f-8cfc-b441da72ecdb&page=queryresults
+[0m22:01:30.057947 [debug] [Thread-1  ]: Database Error in model cohorts_beginner (models/example/2_cohort_visualizations/cohorts_beginner.sql)
+  Table "cohort_calc" must be qualified with a dataset (e.g. dataset.table).
+  compiled code at target/run/creditrisk/models/example/2_cohort_visualizations/cohorts_beginner.sql
+[0m22:01:30.058838 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f5a9283c-007e-4003-9f29-0d7e4fbfb5e7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd81b0ed790>]}
+[0m22:01:30.059897 [error] [Thread-1  ]: 5 of 5 ERROR creating sql view model oscreditrisk.cohorts_beginner ............. [[31mERROR[0m in 1.99s]
+[0m22:01:30.061257 [debug] [Thread-1  ]: Finished running node model.creditrisk.cohorts_beginner
+[0m22:01:30.063353 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m22:01:30.063947 [debug] [MainThread]: Connection 'model.creditrisk.cohorts_beginner' was properly closed.
+[0m22:01:30.064703 [info ] [MainThread]: 
+[0m22:01:30.066331 [info ] [MainThread]: Finished running 4 view models, 1 table model, 1 project hook in 0 hours 0 minutes and 41.52 seconds (41.51s).
+[0m22:01:30.070453 [debug] [MainThread]: Command end result
+[0m22:01:30.148289 [info ] [MainThread]: 
+[0m22:01:30.149099 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m22:01:30.149792 [info ] [MainThread]: 
+[0m22:01:30.150501 [error] [MainThread]:   Database Error in model cohorts_beginner (models/example/2_cohort_visualizations/cohorts_beginner.sql)
+  Table "cohort_calc" must be qualified with a dataset (e.g. dataset.table).
+  compiled code at target/run/creditrisk/models/example/2_cohort_visualizations/cohorts_beginner.sql
+[0m22:01:30.151058 [info ] [MainThread]: 
+[0m22:01:30.151728 [info ] [MainThread]: Done. PASS=4 WARN=0 ERROR=1 SKIP=0 TOTAL=5
+[0m22:01:30.152613 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 48.07829, "process_user_time": 6.868597, "process_kernel_time": 1.36377, "process_mem_max_rss": "229679104", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m22:01:30.153733 [debug] [MainThread]: Command `dbt run` failed at 22:01:30.153506 after 48.08 seconds
+[0m22:01:30.154980 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd81422f5b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd8145698e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd81a8e76a0>]}
+[0m22:01:30.156159 [debug] [MainThread]: Flushing usage events
+[0m22:01:52.177355 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc746a32580>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc748b7d430>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc748b7de80>]}
+
+
+============================== 22:01:52.183543 | a9efd601-3fb8-409d-9d44-e0c05c99021d ==============================
+[0m22:01:52.183543 [info ] [MainThread]: Running with dbt=1.8.8
+[0m22:01:52.184850 [debug] [MainThread]: running dbt with arguments {'cache_selected_only': 'False', 'invocation_command': 'dbt run --select cohorts_beginner', 'target_path': 'None', 'write_json': 'True', 'version_check': 'True', 'log_cache_events': 'False', 'no_print': 'None', 'empty': 'False', 'partial_parse': 'True', 'printer_width': '80', 'use_colors': 'True', 'debug': 'False', 'introspect': 'True', 'warn_error': 'None', 'quiet': 'False', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True', 'log_path': '/Users/david/bbplus-os-credit-risk/bbplus-os-credit-risk/logs', 'use_experimental_parser': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'profiles_dir': '/Users/david/.dbt', 'fail_fast': 'False', 'log_format': 'default', 'indirect_selection': 'eager'}
+[0m22:01:58.677595 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'a9efd601-3fb8-409d-9d44-e0c05c99021d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc74cc1fa30>]}
+[0m22:01:58.760296 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'a9efd601-3fb8-409d-9d44-e0c05c99021d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc74cbd7ca0>]}
+[0m22:01:58.761623 [info ] [MainThread]: Registered adapter: bigquery=1.8.3
+[0m22:01:58.800019 [debug] [MainThread]: checksum: ec53e341a936509427e16df1c646386a84befec52c1957e3f4359fbc36fc93f5, vars: {}, profile: , target: , version: 1.8.8
+[0m22:01:59.195416 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m22:01:59.196064 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m22:01:59.283394 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'a9efd601-3fb8-409d-9d44-e0c05c99021d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc74cf79130>]}
+[0m22:01:59.656164 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'a9efd601-3fb8-409d-9d44-e0c05c99021d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc74cd0ea30>]}
+[0m22:01:59.656979 [info ] [MainThread]: Found 7 models, 2 seeds, 1 operation, 480 macros
+[0m22:01:59.657552 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a9efd601-3fb8-409d-9d44-e0c05c99021d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc746d2f550>]}
+[0m22:01:59.659180 [info ] [MainThread]: 
+[0m22:01:59.660175 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m22:01:59.661590 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_steam-outlet-209412'
+[0m22:01:59.662183 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:02:02.816780 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_steam-outlet-209412, now list_steam-outlet-209412_oscreditrisk)
+[0m22:02:02.818619 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m22:02:03.515702 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a9efd601-3fb8-409d-9d44-e0c05c99021d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc74ccb4070>]}
+[0m22:02:03.516638 [info ] [MainThread]: 
+[0m22:02:03.517287 [info ] [MainThread]: Running 1 on-run-start hook
+[0m22:02:03.538692 [debug] [MainThread]: Writing injected SQL for node "operation.creditrisk.creditrisk-on-run-start-0"
+[0m22:02:03.548399 [info ] [MainThread]: 1 of 1 START hook: creditrisk.on-run-start.0 ................................... [RUN]
+[0m22:02:03.549317 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m22:02:03.550094 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "creditrisk", "target_name": "dev", "connection_name": "master"} */
+
+
+CREATE SCHEMA IF NOT EXISTS oscreditrisk;
+
+CREATE OR REPLACE FUNCTION oscreditrisk.payment_linearization(
+  payment_amounts ARRAY<FLOAT64>,
+  daily_rate ARRAY<FLOAT64>,
+  reporting_dates ARRAY<STRING>
+)
+
+RETURNS ARRAY<FLOAT64>
+LANGUAGE js AS """
+    let result = [];
+    let balance = 0.0;
+
+    for (let i = 0; i < payment_amounts.length; i++) {
+        if (payment_amounts[i] > 0) {
+            // Add payment to balance
+            balance += payment_amounts[i];
+        }
+
+        if (balance >= daily_rate[i]) {
+            result.push(daily_rate[i]);
+            balance = balance - daily_rate[i];
+        }
+        else if (balance > 0.0) {
+            result.push(balance);
+            balance = 0.0
+        } 
+        else {
+            // Push zero for days with no payment distribution
+            result.push(0.0);
+            balance = 0.0
+        }
+    }
+    return result;
+""";
+  
+
+[0m22:02:04.189016 [debug] [MainThread]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=steam-outlet-209412&j=bq:EU:9a666937-5ba7-4f5f-948f-05e3b6c71a6d&page=queryresults
+[0m22:02:05.901241 [info ] [MainThread]: 1 of 1 OK hook: creditrisk.on-run-start.0 ...................................... [[32mSCRIPT (0 processed)[0m in 2.35s]
+[0m22:02:05.902525 [info ] [MainThread]: 
+[0m22:02:05.903590 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m22:02:05.904254 [info ] [MainThread]: 
+[0m22:02:05.909423 [debug] [Thread-1  ]: Began running node model.creditrisk.cohorts_beginner
+[0m22:02:05.911164 [info ] [Thread-1  ]: 1 of 1 START sql view model oscreditrisk.cohorts_beginner ...................... [RUN]
+[0m22:02:05.913427 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_steam-outlet-209412_oscreditrisk, now model.creditrisk.cohorts_beginner)
+[0m22:02:05.914627 [debug] [Thread-1  ]: Began compiling node model.creditrisk.cohorts_beginner
+[0m22:02:05.921965 [debug] [Thread-1  ]: Writing injected SQL for node "model.creditrisk.cohorts_beginner"
+[0m22:02:05.923186 [debug] [Thread-1  ]: Began executing node model.creditrisk.cohorts_beginner
+[0m22:02:05.988554 [debug] [Thread-1  ]: Writing runtime sql for node "model.creditrisk.cohorts_beginner"
+[0m22:02:05.989788 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m22:02:05.990577 [debug] [Thread-1  ]: On model.creditrisk.cohorts_beginner: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "creditrisk", "target_name": "dev", "node_id": "model.creditrisk.cohorts_beginner"} */
+
+
+  create or replace view `steam-outlet-209412`.`oscreditrisk`.`cohorts_beginner`
+  OPTIONS()
+  as /*
+    This transformations is aggregating on a cohort level for visualisation.
+    It uses the beginner core dataset, and produces information on raw payments only.
+*/
+
+WITH accounts_history as (
+    SELECT * FROM `steam-outlet-209412`.`oscreditrisk`.`accounts_history_beginner`
+),
+
+filtered as (
+    SELECT 
+        * 
+    FROM accounts_history
+    -- optional : downsampling results to 1 point every 30 days. Often sufficient.
+    WHERE  MOD(reporting_day, 30) = 1 
+    -- removing the end of cohorts where calculation is not representative of the whole cohort
+    QUALIFY reporting_day <= MIN(account_age_in_days) OVER(PARTITION BY cohort_month) 
+)
+
+-- Aggregating results on a cohort level
+SELECT 
+    cohort,
+    reporting_day,
+    SUM(paid_total) / SUM(unlock_price) as amount_paid_percent,
+FROM filtered
+GROUP BY ALL;
+
+
+[0m22:02:06.752573 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=steam-outlet-209412&j=bq:EU:9877870e-9e3b-47ee-8418-07f2b83ab0d7&page=queryresults
+[0m22:02:07.090855 [debug] [Thread-1  ]: BigQuery adapter: Retry attempt 1 of 1 after error: BadRequest('Unrecognized name: cohort at [27:5]; reason: invalidQuery, location: query, message: Unrecognized name: cohort at [27:5]')
+[0m22:02:07.652691 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=steam-outlet-209412&j=bq:EU:08249f77-ccb0-4b04-b97d-0c6bcacdac2e&page=queryresults
+[0m22:02:07.953144 [error] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=steam-outlet-209412&j=bq:EU:08249f77-ccb0-4b04-b97d-0c6bcacdac2e&page=queryresults
+[0m22:02:07.971138 [debug] [Thread-1  ]: Database Error in model cohorts_beginner (models/example/2_cohort_visualizations/cohorts_beginner.sql)
+  Unrecognized name: cohort at [27:5]
+  compiled code at target/run/creditrisk/models/example/2_cohort_visualizations/cohorts_beginner.sql
+[0m22:02:07.973761 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a9efd601-3fb8-409d-9d44-e0c05c99021d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc74d8386d0>]}
+[0m22:02:07.974889 [error] [Thread-1  ]: 1 of 1 ERROR creating sql view model oscreditrisk.cohorts_beginner ............. [[31mERROR[0m in 2.06s]
+[0m22:02:07.976030 [debug] [Thread-1  ]: Finished running node model.creditrisk.cohorts_beginner
+[0m22:02:07.979003 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m22:02:07.980088 [debug] [MainThread]: Connection 'model.creditrisk.cohorts_beginner' was properly closed.
+[0m22:02:07.980684 [info ] [MainThread]: 
+[0m22:02:07.981457 [info ] [MainThread]: Finished running 1 view model, 1 project hook in 0 hours 0 minutes and 8.32 seconds (8.32s).
+[0m22:02:07.982985 [debug] [MainThread]: Command end result
+[0m22:02:08.073601 [info ] [MainThread]: 
+[0m22:02:08.074885 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m22:02:08.076022 [info ] [MainThread]: 
+[0m22:02:08.078345 [error] [MainThread]:   Database Error in model cohorts_beginner (models/example/2_cohort_visualizations/cohorts_beginner.sql)
+  Unrecognized name: cohort at [27:5]
+  compiled code at target/run/creditrisk/models/example/2_cohort_visualizations/cohorts_beginner.sql
+[0m22:02:08.080589 [info ] [MainThread]: 
+[0m22:02:08.082641 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+[0m22:02:08.084680 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 16.009256, "process_user_time": 6.999031, "process_kernel_time": 1.365149, "process_mem_max_rss": "228093952", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m22:02:08.085965 [debug] [MainThread]: Command `dbt run` failed at 22:02:08.085772 after 16.01 seconds
+[0m22:02:08.086788 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc746a32580>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc746d00bb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc74cd51220>]}
+[0m22:02:08.087472 [debug] [MainThread]: Flushing usage events
+[0m22:04:53.202600 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbb5e25d5e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbb60268d90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbb602683d0>]}
+
+
+============================== 22:04:53.207236 | 87da9dbf-5932-4f32-b8ff-d34b9660be75 ==============================
+[0m22:04:53.207236 [info ] [MainThread]: Running with dbt=1.8.8
+[0m22:04:53.208165 [debug] [MainThread]: running dbt with arguments {'no_print': 'None', 'target_path': 'None', 'printer_width': '80', 'invocation_command': 'dbt run --select cohorts_beginner', 'fail_fast': 'False', 'quiet': 'False', 'introspect': 'True', 'version_check': 'True', 'log_path': '/Users/david/bbplus-os-credit-risk/bbplus-os-credit-risk/logs', 'use_colors': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'indirect_selection': 'eager', 'empty': 'False', 'profiles_dir': '/Users/david/.dbt', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'warn_error': 'None', 'use_experimental_parser': 'False', 'send_anonymous_usage_stats': 'True', 'cache_selected_only': 'False', 'debug': 'False', 'static_parser': 'True', 'log_format': 'default', 'write_json': 'True'}
+[0m22:04:57.260588 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '87da9dbf-5932-4f32-b8ff-d34b9660be75', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbb6451f670>]}
+[0m22:04:57.339994 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '87da9dbf-5932-4f32-b8ff-d34b9660be75', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbb5fb392e0>]}
+[0m22:04:57.340952 [info ] [MainThread]: Registered adapter: bigquery=1.8.3
+[0m22:04:57.379146 [debug] [MainThread]: checksum: ec53e341a936509427e16df1c646386a84befec52c1957e3f4359fbc36fc93f5, vars: {}, profile: , target: , version: 1.8.8
+[0m22:04:57.761342 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m22:04:57.761961 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m22:04:57.844399 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '87da9dbf-5932-4f32-b8ff-d34b9660be75', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbb64a79130>]}
+[0m22:04:58.107951 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '87da9dbf-5932-4f32-b8ff-d34b9660be75', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbb64a459d0>]}
+[0m22:04:58.108742 [info ] [MainThread]: Found 7 models, 2 seeds, 1 operation, 480 macros
+[0m22:04:58.109291 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '87da9dbf-5932-4f32-b8ff-d34b9660be75', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbb64a8ab80>]}
+[0m22:04:58.110897 [info ] [MainThread]: 
+[0m22:04:58.111734 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m22:04:58.112952 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_steam-outlet-209412'
+[0m22:04:58.113663 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:05:01.341317 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_steam-outlet-209412, now list_steam-outlet-209412_oscreditrisk)
+[0m22:05:01.342302 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m22:05:01.997680 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '87da9dbf-5932-4f32-b8ff-d34b9660be75', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbb64538a90>]}
+[0m22:05:01.998562 [info ] [MainThread]: 
+[0m22:05:01.999160 [info ] [MainThread]: Running 1 on-run-start hook
+[0m22:05:02.016899 [debug] [MainThread]: Writing injected SQL for node "operation.creditrisk.creditrisk-on-run-start-0"
+[0m22:05:02.024658 [info ] [MainThread]: 1 of 1 START hook: creditrisk.on-run-start.0 ................................... [RUN]
+[0m22:05:02.025513 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m22:05:02.026258 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "creditrisk", "target_name": "dev", "connection_name": "master"} */
+
+
+CREATE SCHEMA IF NOT EXISTS oscreditrisk;
+
+CREATE OR REPLACE FUNCTION oscreditrisk.payment_linearization(
+  payment_amounts ARRAY<FLOAT64>,
+  daily_rate ARRAY<FLOAT64>,
+  reporting_dates ARRAY<STRING>
+)
+
+RETURNS ARRAY<FLOAT64>
+LANGUAGE js AS """
+    let result = [];
+    let balance = 0.0;
+
+    for (let i = 0; i < payment_amounts.length; i++) {
+        if (payment_amounts[i] > 0) {
+            // Add payment to balance
+            balance += payment_amounts[i];
+        }
+
+        if (balance >= daily_rate[i]) {
+            result.push(daily_rate[i]);
+            balance = balance - daily_rate[i];
+        }
+        else if (balance > 0.0) {
+            result.push(balance);
+            balance = 0.0
+        } 
+        else {
+            // Push zero for days with no payment distribution
+            result.push(0.0);
+            balance = 0.0
+        }
+    }
+    return result;
+""";
+  
+
+[0m22:05:02.616979 [debug] [MainThread]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=steam-outlet-209412&j=bq:EU:97d8d908-e175-4af3-8f8e-db453d821e16&page=queryresults
+[0m22:05:04.277464 [info ] [MainThread]: 1 of 1 OK hook: creditrisk.on-run-start.0 ...................................... [[32mSCRIPT (0 processed)[0m in 2.25s]
+[0m22:05:04.278132 [info ] [MainThread]: 
+[0m22:05:04.278858 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m22:05:04.279359 [info ] [MainThread]: 
+[0m22:05:04.283153 [debug] [Thread-1  ]: Began running node model.creditrisk.cohorts_beginner
+[0m22:05:04.284361 [info ] [Thread-1  ]: 1 of 1 START sql view model oscreditrisk.cohorts_beginner ...................... [RUN]
+[0m22:05:04.285251 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_steam-outlet-209412_oscreditrisk, now model.creditrisk.cohorts_beginner)
+[0m22:05:04.285857 [debug] [Thread-1  ]: Began compiling node model.creditrisk.cohorts_beginner
+[0m22:05:04.290670 [debug] [Thread-1  ]: Writing injected SQL for node "model.creditrisk.cohorts_beginner"
+[0m22:05:04.291906 [debug] [Thread-1  ]: Began executing node model.creditrisk.cohorts_beginner
+[0m22:05:04.341104 [debug] [Thread-1  ]: Writing runtime sql for node "model.creditrisk.cohorts_beginner"
+[0m22:05:04.343411 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m22:05:04.344405 [debug] [Thread-1  ]: On model.creditrisk.cohorts_beginner: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "creditrisk", "target_name": "dev", "node_id": "model.creditrisk.cohorts_beginner"} */
+
+
+  create or replace view `steam-outlet-209412`.`oscreditrisk`.`cohorts_beginner`
+  OPTIONS()
+  as /*
+    This transformations is aggregating on a cohort level for visualisation.
+    It uses the beginner core dataset. 
+    Produces information on raw payments only.
+*/
+
+WITH accounts_history as (
+    SELECT * FROM `steam-outlet-209412`.`oscreditrisk`.`accounts_history_beginner`
+),
+
+filtered as (
+    SELECT 
+        * 
+    FROM accounts_history
+    -- optional : downsampling results to 1 point every 30 days. Often sufficient.
+    WHERE  MOD(reporting_day, 30) = 1 
+    -- removing the end of cohorts where calculation is not representative of the whole cohort
+    QUALIFY reporting_day <= MIN(account_age_in_days) OVER(PARTITION BY cohort_month) 
+)
+
+-- Aggregating results on a cohort level
+SELECT 
+    cohort_month,
+    reporting_day,
+    SUM(paid_total) / SUM(unlock_price) as amount_paid_percent,
+FROM filtered
+GROUP BY ALL;
+
+
+[0m22:05:05.081530 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=steam-outlet-209412&j=bq:EU:d0832c1c-2883-4dd1-b47c-ec6cd59948b7&page=queryresults
+[0m22:05:05.808062 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '87da9dbf-5932-4f32-b8ff-d34b9660be75', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbb65102820>]}
+[0m22:05:05.809083 [info ] [Thread-1  ]: 1 of 1 OK created sql view model oscreditrisk.cohorts_beginner ................. [[32mCREATE VIEW (0 processed)[0m in 1.52s]
+[0m22:05:05.810051 [debug] [Thread-1  ]: Finished running node model.creditrisk.cohorts_beginner
+[0m22:05:05.811746 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m22:05:05.812229 [debug] [MainThread]: Connection 'model.creditrisk.cohorts_beginner' was properly closed.
+[0m22:05:05.812778 [info ] [MainThread]: 
+[0m22:05:05.813344 [info ] [MainThread]: Finished running 1 view model, 1 project hook in 0 hours 0 minutes and 7.70 seconds (7.70s).
+[0m22:05:05.814368 [debug] [MainThread]: Command end result
+[0m22:05:05.873310 [info ] [MainThread]: 
+[0m22:05:05.874239 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m22:05:05.874912 [info ] [MainThread]: 
+[0m22:05:05.875603 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m22:05:05.876520 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 12.763528, "process_user_time": 5.863736, "process_kernel_time": 1.025358, "process_mem_max_rss": "227291136", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m22:05:05.877460 [debug] [MainThread]: Command `dbt run` succeeded at 22:05:05.877293 after 12.76 seconds
+[0m22:05:05.878085 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbb5e25d5e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbb5e570940>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbb5fb3f910>]}
+[0m22:05:05.878695 [debug] [MainThread]: Flushing usage events
+[0m22:05:17.759268 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd6ea260580>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd6ec276430>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd6ec276e80>]}
+
+
+============================== 22:05:17.764714 | 22f3b36e-05b7-4f59-9483-769813b8b84e ==============================
+[0m22:05:17.764714 [info ] [MainThread]: Running with dbt=1.8.8
+[0m22:05:17.765742 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'no_print': 'None', 'partial_parse': 'True', 'introspect': 'True', 'write_json': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'fail_fast': 'False', 'indirect_selection': 'eager', 'static_parser': 'True', 'debug': 'False', 'profiles_dir': '/Users/david/.dbt', 'target_path': 'None', 'quiet': 'False', 'invocation_command': 'dbt run --select cohorts_advanced', 'use_experimental_parser': 'False', 'log_format': 'default', 'send_anonymous_usage_stats': 'True', 'cache_selected_only': 'False', 'version_check': 'True', 'empty': 'False', 'use_colors': 'True', 'log_cache_events': 'False', 'log_path': '/Users/david/bbplus-os-credit-risk/bbplus-os-credit-risk/logs', 'warn_error': 'None'}
+[0m22:05:21.995010 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '22f3b36e-05b7-4f59-9483-769813b8b84e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd6efd83ee0>]}
+[0m22:05:22.083306 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '22f3b36e-05b7-4f59-9483-769813b8b84e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd6efcd6d30>]}
+[0m22:05:22.084401 [info ] [MainThread]: Registered adapter: bigquery=1.8.3
+[0m22:05:22.124055 [debug] [MainThread]: checksum: ec53e341a936509427e16df1c646386a84befec52c1957e3f4359fbc36fc93f5, vars: {}, profile: , target: , version: 1.8.8
+[0m22:05:22.480684 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m22:05:22.481245 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m22:05:22.557178 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '22f3b36e-05b7-4f59-9483-769813b8b84e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd6f0979130>]}
+[0m22:05:22.805233 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '22f3b36e-05b7-4f59-9483-769813b8b84e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd6f066c490>]}
+[0m22:05:22.806030 [info ] [MainThread]: Found 7 models, 2 seeds, 1 operation, 480 macros
+[0m22:05:22.806585 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '22f3b36e-05b7-4f59-9483-769813b8b84e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd6ec05c640>]}
+[0m22:05:22.808230 [info ] [MainThread]: 
+[0m22:05:22.809043 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m22:05:22.810295 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_steam-outlet-209412'
+[0m22:05:22.810907 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:05:25.967532 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_steam-outlet-209412, now list_steam-outlet-209412_oscreditrisk)
+[0m22:05:25.969270 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m22:05:26.578490 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '22f3b36e-05b7-4f59-9483-769813b8b84e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd6f059edf0>]}
+[0m22:05:26.579342 [info ] [MainThread]: 
+[0m22:05:26.579942 [info ] [MainThread]: Running 1 on-run-start hook
+[0m22:05:26.597978 [debug] [MainThread]: Writing injected SQL for node "operation.creditrisk.creditrisk-on-run-start-0"
+[0m22:05:26.608411 [info ] [MainThread]: 1 of 1 START hook: creditrisk.on-run-start.0 ................................... [RUN]
+[0m22:05:26.609289 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m22:05:26.610048 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "creditrisk", "target_name": "dev", "connection_name": "master"} */
+
+
+CREATE SCHEMA IF NOT EXISTS oscreditrisk;
+
+CREATE OR REPLACE FUNCTION oscreditrisk.payment_linearization(
+  payment_amounts ARRAY<FLOAT64>,
+  daily_rate ARRAY<FLOAT64>,
+  reporting_dates ARRAY<STRING>
+)
+
+RETURNS ARRAY<FLOAT64>
+LANGUAGE js AS """
+    let result = [];
+    let balance = 0.0;
+
+    for (let i = 0; i < payment_amounts.length; i++) {
+        if (payment_amounts[i] > 0) {
+            // Add payment to balance
+            balance += payment_amounts[i];
+        }
+
+        if (balance >= daily_rate[i]) {
+            result.push(daily_rate[i]);
+            balance = balance - daily_rate[i];
+        }
+        else if (balance > 0.0) {
+            result.push(balance);
+            balance = 0.0
+        } 
+        else {
+            // Push zero for days with no payment distribution
+            result.push(0.0);
+            balance = 0.0
+        }
+    }
+    return result;
+""";
+  
+
+[0m22:05:27.264617 [debug] [MainThread]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=steam-outlet-209412&j=bq:EU:4d7e4cd7-d270-4605-b934-e9acb8edd12a&page=queryresults
+[0m22:05:28.672041 [info ] [MainThread]: 1 of 1 OK hook: creditrisk.on-run-start.0 ...................................... [[32mSCRIPT (0 processed)[0m in 2.06s]
+[0m22:05:28.673200 [info ] [MainThread]: 
+[0m22:05:28.674686 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m22:05:28.675676 [info ] [MainThread]: 
+[0m22:05:28.681455 [debug] [Thread-1  ]: Began running node model.creditrisk.cohorts_advanced
+[0m22:05:28.682471 [info ] [Thread-1  ]: 1 of 1 START sql view model oscreditrisk.cohorts_advanced ...................... [RUN]
+[0m22:05:28.683934 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_steam-outlet-209412_oscreditrisk, now model.creditrisk.cohorts_advanced)
+[0m22:05:28.684758 [debug] [Thread-1  ]: Began compiling node model.creditrisk.cohorts_advanced
+[0m22:05:28.692874 [debug] [Thread-1  ]: Writing injected SQL for node "model.creditrisk.cohorts_advanced"
+[0m22:05:28.694863 [debug] [Thread-1  ]: Began executing node model.creditrisk.cohorts_advanced
+[0m22:05:28.749810 [debug] [Thread-1  ]: Writing runtime sql for node "model.creditrisk.cohorts_advanced"
+[0m22:05:28.751421 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m22:05:28.753006 [debug] [Thread-1  ]: On model.creditrisk.cohorts_advanced: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "creditrisk", "target_name": "dev", "node_id": "model.creditrisk.cohorts_advanced"} */
+
+
+  create or replace view `steam-outlet-209412`.`oscreditrisk`.`cohorts_advanced`
+  OPTIONS()
+  as /*
+    This transformations is aggregating on a cohort level for visualisation.
+    It uses the advanced core dataset.
+    Produces information on linearized payments and with a term elapsed in % excluding downpayment.
+*/
+
+WITH accounts_history as (
+    SELECT * FROM `steam-outlet-209412`.`oscreditrisk`.`accounts_history_advanced`
+),
+
+perc_elapsed as (
+  SELECT 
+    *,
+    SAFE_DIVIDE(reporting_day_excl_dp, nominal_term_excl_dp) as perc_term_elapsed,
+  FROM accounts_history
+),
+
+approximating as (
+  SELECT
+    *,
+    -- Flooring the perc paid to the next 5% (we could choose another grain)
+    FLOOR(perc_term_elapsed * 20) * 5 as perc_term_elapsed_approx,
+  FROM perc_elapsed
+)
+
+SELECT * FROM approximating
+WHERE perc_term_elapsed_approx <= 200
+QUALIFY ROW_NUMBER() OVER(PARTITION BY account_id, CAST(perc_term_elapsed_approx AS STRING) ORDER BY reporting_day_excl_dp) = 1;
+
+
+[0m22:05:29.529597 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=steam-outlet-209412&j=bq:EU:01d31ae3-cadf-4f92-83dc-a7bf786ecaa2&page=queryresults
+[0m22:05:30.168088 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '22f3b36e-05b7-4f59-9483-769813b8b84e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd6f1341880>]}
+[0m22:05:30.169179 [info ] [Thread-1  ]: 1 of 1 OK created sql view model oscreditrisk.cohorts_advanced ................. [[32mCREATE VIEW (0 processed)[0m in 1.48s]
+[0m22:05:30.170433 [debug] [Thread-1  ]: Finished running node model.creditrisk.cohorts_advanced
+[0m22:05:30.172267 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m22:05:30.172889 [debug] [MainThread]: Connection 'model.creditrisk.cohorts_advanced' was properly closed.
+[0m22:05:30.173430 [info ] [MainThread]: 
+[0m22:05:30.174021 [info ] [MainThread]: Finished running 1 view model, 1 project hook in 0 hours 0 minutes and 7.36 seconds (7.36s).
+[0m22:05:30.175144 [debug] [MainThread]: Command end result
+[0m22:05:30.233283 [info ] [MainThread]: 
+[0m22:05:30.234534 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m22:05:30.235310 [info ] [MainThread]: 
+[0m22:05:30.236121 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m22:05:30.237136 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 12.60358, "process_user_time": 5.919085, "process_kernel_time": 1.035066, "process_mem_max_rss": "227225600", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m22:05:30.238216 [debug] [MainThread]: Command `dbt run` succeeded at 22:05:30.237984 after 12.60 seconds
+[0m22:05:30.238902 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd6ea260580>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd6f03d7d90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd6efcd6d30>]}
+[0m22:05:30.239501 [debug] [MainThread]: Flushing usage events
+[0m22:16:02.097525 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f83fd22f610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f83ff231dc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f83ff231400>]}
+
+
+============================== 22:16:02.101829 | cb6c6659-9cda-4354-881b-6ff12fcf06c9 ==============================
+[0m22:16:02.101829 [info ] [MainThread]: Running with dbt=1.8.8
+[0m22:16:02.102761 [debug] [MainThread]: running dbt with arguments {'empty': 'False', 'use_colors': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'quiet': 'False', 'version_check': 'True', 'warn_error': 'None', 'write_json': 'True', 'log_path': '/Users/david/bbplus-os-credit-risk/bbplus-os-credit-risk/logs', 'indirect_selection': 'eager', 'introspect': 'True', 'log_cache_events': 'False', 'cache_selected_only': 'False', 'no_print': 'None', 'invocation_command': 'dbt run --select cohorts_advanced', 'static_parser': 'True', 'profiles_dir': '/Users/david/.dbt', 'use_experimental_parser': 'False', 'printer_width': '80', 'fail_fast': 'False', 'send_anonymous_usage_stats': 'True', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True'}
+[0m22:16:05.759076 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'cb6c6659-9cda-4354-881b-6ff12fcf06c9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8402ca8520>]}
+[0m22:16:05.838508 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'cb6c6659-9cda-4354-881b-6ff12fcf06c9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f83ff201160>]}
+[0m22:16:05.839463 [info ] [MainThread]: Registered adapter: bigquery=1.8.3
+[0m22:16:05.868916 [debug] [MainThread]: checksum: ec53e341a936509427e16df1c646386a84befec52c1957e3f4359fbc36fc93f5, vars: {}, profile: , target: , version: 1.8.8
+[0m22:16:06.320465 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m22:16:06.321104 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m22:16:06.415926 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'cb6c6659-9cda-4354-881b-6ff12fcf06c9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f840373a130>]}
+[0m22:16:06.693470 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'cb6c6659-9cda-4354-881b-6ff12fcf06c9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f840373baf0>]}
+[0m22:16:06.694334 [info ] [MainThread]: Found 7 models, 2 seeds, 1 operation, 480 macros
+[0m22:16:06.694924 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'cb6c6659-9cda-4354-881b-6ff12fcf06c9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f840374ab20>]}
+[0m22:16:06.696639 [info ] [MainThread]: 
+[0m22:16:06.697657 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m22:16:06.700311 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_steam-outlet-209412'
+[0m22:16:06.701618 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:16:09.812768 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_steam-outlet-209412, now list_steam-outlet-209412_oscreditrisk)
+[0m22:16:09.814082 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m22:16:10.417910 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'cb6c6659-9cda-4354-881b-6ff12fcf06c9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8403650070>]}
+[0m22:16:10.418901 [info ] [MainThread]: 
+[0m22:16:10.419599 [info ] [MainThread]: Running 1 on-run-start hook
+[0m22:16:10.438662 [debug] [MainThread]: Writing injected SQL for node "operation.creditrisk.creditrisk-on-run-start-0"
+[0m22:16:10.446271 [info ] [MainThread]: 1 of 1 START hook: creditrisk.on-run-start.0 ................................... [RUN]
+[0m22:16:10.447114 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m22:16:10.447857 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "creditrisk", "target_name": "dev", "connection_name": "master"} */
+
+
+CREATE SCHEMA IF NOT EXISTS oscreditrisk;
+
+CREATE OR REPLACE FUNCTION oscreditrisk.payment_linearization(
+  payment_amounts ARRAY<FLOAT64>,
+  daily_rate ARRAY<FLOAT64>,
+  reporting_dates ARRAY<STRING>
+)
+
+RETURNS ARRAY<FLOAT64>
+LANGUAGE js AS """
+    let result = [];
+    let balance = 0.0;
+
+    for (let i = 0; i < payment_amounts.length; i++) {
+        if (payment_amounts[i] > 0) {
+            // Add payment to balance
+            balance += payment_amounts[i];
+        }
+
+        if (balance >= daily_rate[i]) {
+            result.push(daily_rate[i]);
+            balance = balance - daily_rate[i];
+        }
+        else if (balance > 0.0) {
+            result.push(balance);
+            balance = 0.0
+        } 
+        else {
+            // Push zero for days with no payment distribution
+            result.push(0.0);
+            balance = 0.0
+        }
+    }
+    return result;
+""";
+  
+
+[0m22:16:11.073158 [debug] [MainThread]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=steam-outlet-209412&j=bq:EU:6544a183-4551-4330-87d6-1ba6a0400ecd&page=queryresults
+[0m22:16:12.438154 [info ] [MainThread]: 1 of 1 OK hook: creditrisk.on-run-start.0 ...................................... [[32mSCRIPT (0 processed)[0m in 1.99s]
+[0m22:16:12.438821 [info ] [MainThread]: 
+[0m22:16:12.439550 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m22:16:12.440064 [info ] [MainThread]: 
+[0m22:16:12.443197 [debug] [Thread-1  ]: Began running node model.creditrisk.cohorts_advanced
+[0m22:16:12.444023 [info ] [Thread-1  ]: 1 of 1 START sql view model oscreditrisk.cohorts_advanced ...................... [RUN]
+[0m22:16:12.445422 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_steam-outlet-209412_oscreditrisk, now model.creditrisk.cohorts_advanced)
+[0m22:16:12.446059 [debug] [Thread-1  ]: Began compiling node model.creditrisk.cohorts_advanced
+[0m22:16:12.450916 [debug] [Thread-1  ]: Writing injected SQL for node "model.creditrisk.cohorts_advanced"
+[0m22:16:12.452754 [debug] [Thread-1  ]: Began executing node model.creditrisk.cohorts_advanced
+[0m22:16:12.496940 [debug] [Thread-1  ]: Writing runtime sql for node "model.creditrisk.cohorts_advanced"
+[0m22:16:12.498365 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m22:16:12.499166 [debug] [Thread-1  ]: On model.creditrisk.cohorts_advanced: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "creditrisk", "target_name": "dev", "node_id": "model.creditrisk.cohorts_advanced"} */
+
+
+  create or replace view `steam-outlet-209412`.`oscreditrisk`.`cohorts_advanced`
+  OPTIONS()
+  as /*
+    This transformations is aggregating on a cohort level for visualisation.
+    It uses the advanced core dataset.
+    Produces information on linearized payments and with a term elapsed in % excluding downpayment.
+*/
+
+WITH accounts_history as (
+    SELECT * FROM `steam-outlet-209412`.`oscreditrisk`.`accounts_history_advanced`
+),
+
+perc_elapsed as (
+    SELECT 
+        *,
+        SAFE_DIVIDE(reporting_day_excl_dp, nominal_term_excl_dp) as perc_term_elapsed,
+    FROM accounts_history
+),
+
+approximating as (
+    SELECT
+        *,
+        -- Flooring the perc paid to the next 5% (we could choose another grain)
+        FLOOR(perc_term_elapsed * 20) * 5 as perc_term_elapsed_approx,
+    FROM perc_elapsed
+),
+
+downsampling as (
+    SELECT 
+        * 
+    FROM approximating
+    -- Optional : limit the time horizon to 200% of contractual term. Often sufficient.
+    WHERE perc_term_elapsed_approx <= 200
+    -- Ensure the dataset ends up with only one row per grain on % of contractual term
+    QUALIFY ROW_NUMBER() OVER(PARTITION BY account_id, CAST(perc_term_elapsed_approx AS STRING) ORDER BY reporting_day_excl_dp) = 1
+),
+
+counting_accounts as (
+  SELECT 
+    *,
+    COUNT(account_id) OVER (PARTITION BY cohort, CAST(perc_term_elapsed_approx AS INT64)) as cnt_accounts,
+  FROM downsampling
+),
+
+filtering as (
+    SELECT 
+        *,
+    FROM counting_accounts
+    -- optional - removes the end of cohorts where calculation is not representative of the whole cohort. 
+    -- We take 98% and not 100% as otherwise only a few outliers might prevent us from showing the cohort.
+    QUALIFY cnt_accounts >= 0.98 * MAX(cnt_accounts) OVER(PARTITION BY cohort_month) 
+),
+
+aggregating as (
+    SELECT 
+        cohort_month,
+        perc_term_elapsed_approx,
+        SUM(paid_total_lin) / SUM(unlock_price - downpayment) as amount_paid_percent,
+    FROM filtering
+    GROUP BY ALL 
+)
+
+SELECT * FROM aggregating;
+
+
+[0m22:16:13.195113 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=steam-outlet-209412&j=bq:EU:26b6f6ce-c52d-486f-8cdf-1cbbd2abe21b&page=queryresults
+[0m22:16:13.490918 [debug] [Thread-1  ]: BigQuery adapter: Retry attempt 1 of 1 after error: BadRequest('Unrecognized name: cohort at [44:42]; reason: invalidQuery, location: query, message: Unrecognized name: cohort at [44:42]')
+[0m22:16:14.348475 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=steam-outlet-209412&j=bq:EU:485a5b8e-053b-4874-8981-8451681742a2&page=queryresults
+[0m22:16:14.622050 [error] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=steam-outlet-209412&j=bq:EU:485a5b8e-053b-4874-8981-8451681742a2&page=queryresults
+[0m22:16:14.639993 [debug] [Thread-1  ]: Database Error in model cohorts_advanced (models/example/2_cohort_visualizations/cohorts_advanced.sql)
+  Unrecognized name: cohort at [44:42]
+  compiled code at target/run/creditrisk/models/example/2_cohort_visualizations/cohorts_advanced.sql
+[0m22:16:14.642967 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'cb6c6659-9cda-4354-881b-6ff12fcf06c9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8403dbfb50>]}
+[0m22:16:14.644370 [error] [Thread-1  ]: 1 of 1 ERROR creating sql view model oscreditrisk.cohorts_advanced ............. [[31mERROR[0m in 2.20s]
+[0m22:16:14.645433 [debug] [Thread-1  ]: Finished running node model.creditrisk.cohorts_advanced
+[0m22:16:14.647240 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m22:16:14.647754 [debug] [MainThread]: Connection 'model.creditrisk.cohorts_advanced' was properly closed.
+[0m22:16:14.648282 [info ] [MainThread]: 
+[0m22:16:14.648941 [info ] [MainThread]: Finished running 1 view model, 1 project hook in 0 hours 0 minutes and 7.95 seconds (7.95s).
+[0m22:16:14.651128 [debug] [MainThread]: Command end result
+[0m22:16:14.709403 [info ] [MainThread]: 
+[0m22:16:14.710641 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m22:16:14.711207 [info ] [MainThread]: 
+[0m22:16:14.711887 [error] [MainThread]:   Database Error in model cohorts_advanced (models/example/2_cohort_visualizations/cohorts_advanced.sql)
+  Unrecognized name: cohort at [44:42]
+  compiled code at target/run/creditrisk/models/example/2_cohort_visualizations/cohorts_advanced.sql
+[0m22:16:14.712427 [info ] [MainThread]: 
+[0m22:16:14.713002 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+[0m22:16:14.713854 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 12.7149515, "process_user_time": 5.272713, "process_kernel_time": 0.969184, "process_mem_max_rss": "228200448", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m22:16:14.714776 [debug] [MainThread]: Command `dbt run` failed at 22:16:14.714608 after 12.72 seconds
+[0m22:16:14.715400 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f83fd22f610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f83ff201160>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f83fea008e0>]}
+[0m22:16:14.715992 [debug] [MainThread]: Flushing usage events
+[0m22:16:20.566511 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8e9a22f5e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8e9c2f1d90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8e9c2f13d0>]}
+
+
+============================== 22:16:20.572970 | 2cc2c2e6-4b7c-4ffc-b340-532598a9d341 ==============================
+[0m22:16:20.572970 [info ] [MainThread]: Running with dbt=1.8.8
+[0m22:16:20.574217 [debug] [MainThread]: running dbt with arguments {'target_path': 'None', 'use_experimental_parser': 'False', 'log_path': '/Users/david/bbplus-os-credit-risk/bbplus-os-credit-risk/logs', 'cache_selected_only': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'partial_parse': 'True', 'version_check': 'True', 'write_json': 'True', 'no_print': 'None', 'invocation_command': 'dbt run --select cohorts_advanced', 'send_anonymous_usage_stats': 'True', 'introspect': 'True', 'fail_fast': 'False', 'profiles_dir': '/Users/david/.dbt', 'use_colors': 'True', 'debug': 'False', 'log_format': 'default', 'printer_width': '80', 'indirect_selection': 'eager', 'warn_error': 'None', 'quiet': 'False', 'log_cache_events': 'False', 'empty': 'False', 'static_parser': 'True'}
+[0m22:16:27.172991 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '2cc2c2e6-4b7c-4ffc-b340-532598a9d341', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8e9c2a7b50>]}
+[0m22:16:27.285355 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '2cc2c2e6-4b7c-4ffc-b340-532598a9d341', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8ea02d55b0>]}
+[0m22:16:27.286400 [info ] [MainThread]: Registered adapter: bigquery=1.8.3
+[0m22:16:27.331265 [debug] [MainThread]: checksum: ec53e341a936509427e16df1c646386a84befec52c1957e3f4359fbc36fc93f5, vars: {}, profile: , target: , version: 1.8.8
+[0m22:16:27.849505 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m22:16:27.850204 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m22:16:27.949304 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '2cc2c2e6-4b7c-4ffc-b340-532598a9d341', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8ea083a130>]}
+[0m22:16:28.233603 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '2cc2c2e6-4b7c-4ffc-b340-532598a9d341', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8ea0802a30>]}
+[0m22:16:28.234416 [info ] [MainThread]: Found 7 models, 2 seeds, 1 operation, 480 macros
+[0m22:16:28.235112 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '2cc2c2e6-4b7c-4ffc-b340-532598a9d341', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8ea084ab20>]}
+[0m22:16:28.236986 [info ] [MainThread]: 
+[0m22:16:28.238098 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m22:16:28.239566 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_steam-outlet-209412'
+[0m22:16:28.240976 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:16:31.682343 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_steam-outlet-209412, now list_steam-outlet-209412_oscreditrisk)
+[0m22:16:31.684603 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m22:16:32.324465 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '2cc2c2e6-4b7c-4ffc-b340-532598a9d341', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8e9a56b940>]}
+[0m22:16:32.325455 [info ] [MainThread]: 
+[0m22:16:32.326432 [info ] [MainThread]: Running 1 on-run-start hook
+[0m22:16:32.351021 [debug] [MainThread]: Writing injected SQL for node "operation.creditrisk.creditrisk-on-run-start-0"
+[0m22:16:32.363678 [info ] [MainThread]: 1 of 1 START hook: creditrisk.on-run-start.0 ................................... [RUN]
+[0m22:16:32.365332 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m22:16:32.366299 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "creditrisk", "target_name": "dev", "connection_name": "master"} */
+
+
+CREATE SCHEMA IF NOT EXISTS oscreditrisk;
+
+CREATE OR REPLACE FUNCTION oscreditrisk.payment_linearization(
+  payment_amounts ARRAY<FLOAT64>,
+  daily_rate ARRAY<FLOAT64>,
+  reporting_dates ARRAY<STRING>
+)
+
+RETURNS ARRAY<FLOAT64>
+LANGUAGE js AS """
+    let result = [];
+    let balance = 0.0;
+
+    for (let i = 0; i < payment_amounts.length; i++) {
+        if (payment_amounts[i] > 0) {
+            // Add payment to balance
+            balance += payment_amounts[i];
+        }
+
+        if (balance >= daily_rate[i]) {
+            result.push(daily_rate[i]);
+            balance = balance - daily_rate[i];
+        }
+        else if (balance > 0.0) {
+            result.push(balance);
+            balance = 0.0
+        } 
+        else {
+            // Push zero for days with no payment distribution
+            result.push(0.0);
+            balance = 0.0
+        }
+    }
+    return result;
+""";
+  
+
+[0m22:16:33.021609 [debug] [MainThread]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=steam-outlet-209412&j=bq:EU:12696de5-07e6-4867-b608-374dfe507bec&page=queryresults
+[0m22:16:34.172695 [info ] [MainThread]: 1 of 1 OK hook: creditrisk.on-run-start.0 ...................................... [[32mSCRIPT (0 processed)[0m in 1.81s]
+[0m22:16:34.173379 [info ] [MainThread]: 
+[0m22:16:34.174178 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m22:16:34.175185 [info ] [MainThread]: 
+[0m22:16:34.179380 [debug] [Thread-1  ]: Began running node model.creditrisk.cohorts_advanced
+[0m22:16:34.180393 [info ] [Thread-1  ]: 1 of 1 START sql view model oscreditrisk.cohorts_advanced ...................... [RUN]
+[0m22:16:34.181176 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_steam-outlet-209412_oscreditrisk, now model.creditrisk.cohorts_advanced)
+[0m22:16:34.181792 [debug] [Thread-1  ]: Began compiling node model.creditrisk.cohorts_advanced
+[0m22:16:34.190276 [debug] [Thread-1  ]: Writing injected SQL for node "model.creditrisk.cohorts_advanced"
+[0m22:16:34.192075 [debug] [Thread-1  ]: Began executing node model.creditrisk.cohorts_advanced
+[0m22:16:34.253458 [debug] [Thread-1  ]: Writing runtime sql for node "model.creditrisk.cohorts_advanced"
+[0m22:16:34.255620 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m22:16:34.256827 [debug] [Thread-1  ]: On model.creditrisk.cohorts_advanced: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "creditrisk", "target_name": "dev", "node_id": "model.creditrisk.cohorts_advanced"} */
+
+
+  create or replace view `steam-outlet-209412`.`oscreditrisk`.`cohorts_advanced`
+  OPTIONS()
+  as /*
+    This transformations is aggregating on a cohort level for visualisation.
+    It uses the advanced core dataset.
+    Produces information on linearized payments and with a term elapsed in % excluding downpayment.
+*/
+
+WITH accounts_history as (
+    SELECT * FROM `steam-outlet-209412`.`oscreditrisk`.`accounts_history_advanced`
+),
+
+perc_elapsed as (
+    SELECT 
+        *,
+        SAFE_DIVIDE(reporting_day_excl_dp, nominal_term_excl_dp) as perc_term_elapsed,
+    FROM accounts_history
+),
+
+approximating as (
+    SELECT
+        *,
+        -- Flooring the perc paid to the next 5% (we could choose another grain)
+        FLOOR(perc_term_elapsed * 20) * 5 as perc_term_elapsed_approx,
+    FROM perc_elapsed
+),
+
+downsampling as (
+    SELECT 
+        * 
+    FROM approximating
+    -- Optional : limit the time horizon to 200% of contractual term. Often sufficient.
+    WHERE perc_term_elapsed_approx <= 200
+    -- Ensure the dataset ends up with only one row per grain on % of contractual term
+    QUALIFY ROW_NUMBER() OVER(PARTITION BY account_id, CAST(perc_term_elapsed_approx AS STRING) ORDER BY reporting_day_excl_dp) = 1
+),
+
+counting_accounts as (
+  SELECT 
+    *,
+    COUNT(account_id) OVER (PARTITION BY cohort_month, CAST(perc_term_elapsed_approx AS INT64)) as cnt_accounts,
+  FROM downsampling
+),
+
+filtering as (
+    SELECT 
+        *,
+    FROM counting_accounts
+    -- optional - removes the end of cohorts where calculation is not representative of the whole cohort. 
+    -- We take 98% and not 100% as otherwise only a few outliers might prevent us from showing the cohort.
+    QUALIFY cnt_accounts >= 0.98 * MAX(cnt_accounts) OVER(PARTITION BY cohort_month) 
+),
+
+aggregating as (
+    SELECT 
+        cohort_month,
+        perc_term_elapsed_approx,
+        SUM(paid_total_lin) / SUM(unlock_price - downpayment) as amount_paid_percent,
+    FROM filtering
+    GROUP BY ALL 
+)
+
+SELECT * FROM aggregating;
+
+
+[0m22:16:34.992813 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=steam-outlet-209412&j=bq:EU:ce2d841a-5180-4137-a26d-5480c1dfe05b&page=queryresults
+[0m22:16:35.280785 [debug] [Thread-1  ]: BigQuery adapter: Retry attempt 1 of 1 after error: BadRequest('Unrecognized name: cohort_month at [44:42]; reason: invalidQuery, location: query, message: Unrecognized name: cohort_month at [44:42]')
+[0m22:16:35.786079 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=steam-outlet-209412&j=bq:EU:e57bba74-0fb5-40a0-a107-016d23dc2a4a&page=queryresults
+[0m22:16:36.068907 [error] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=steam-outlet-209412&j=bq:EU:e57bba74-0fb5-40a0-a107-016d23dc2a4a&page=queryresults
+[0m22:16:36.081849 [debug] [Thread-1  ]: Database Error in model cohorts_advanced (models/example/2_cohort_visualizations/cohorts_advanced.sql)
+  Unrecognized name: cohort_month at [44:42]
+  compiled code at target/run/creditrisk/models/example/2_cohort_visualizations/cohorts_advanced.sql
+[0m22:16:36.084602 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2cc2c2e6-4b7c-4ffc-b340-532598a9d341', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8ea0fa8d60>]}
+[0m22:16:36.086176 [error] [Thread-1  ]: 1 of 1 ERROR creating sql view model oscreditrisk.cohorts_advanced ............. [[31mERROR[0m in 1.90s]
+[0m22:16:36.087865 [debug] [Thread-1  ]: Finished running node model.creditrisk.cohorts_advanced
+[0m22:16:36.089609 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m22:16:36.090374 [debug] [MainThread]: Connection 'model.creditrisk.cohorts_advanced' was properly closed.
+[0m22:16:36.090855 [info ] [MainThread]: 
+[0m22:16:36.091398 [info ] [MainThread]: Finished running 1 view model, 1 project hook in 0 hours 0 minutes and 7.85 seconds (7.85s).
+[0m22:16:36.092708 [debug] [MainThread]: Command end result
+[0m22:16:36.144335 [info ] [MainThread]: 
+[0m22:16:36.144979 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m22:16:36.145373 [info ] [MainThread]: 
+[0m22:16:36.145900 [error] [MainThread]:   Database Error in model cohorts_advanced (models/example/2_cohort_visualizations/cohorts_advanced.sql)
+  Unrecognized name: cohort_month at [44:42]
+  compiled code at target/run/creditrisk/models/example/2_cohort_visualizations/cohorts_advanced.sql
+[0m22:16:36.146347 [info ] [MainThread]: 
+[0m22:16:36.146773 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+[0m22:16:36.147401 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 15.718016, "process_user_time": 7.21954, "process_kernel_time": 1.519632, "process_mem_max_rss": "228024320", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m22:16:36.148081 [debug] [MainThread]: Command `dbt run` failed at 22:16:36.147962 after 15.72 seconds
+[0m22:16:36.148550 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8e9a22f5e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8e9a532550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8e9ba94940>]}
+[0m22:16:36.148985 [debug] [MainThread]: Flushing usage events
+[0m22:17:10.138451 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f89142215b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f89161f9d90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f89161f93d0>]}
+
+
+============================== 22:17:10.143626 | c5d8d364-9dac-4596-bed0-bb7ee32dfc1f ==============================
+[0m22:17:10.143626 [info ] [MainThread]: Running with dbt=1.8.8
+[0m22:17:10.144804 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'quiet': 'False', 'write_json': 'True', 'invocation_command': 'dbt run --select 1+cohorts_advanced', 'use_experimental_parser': 'False', 'introspect': 'True', 'target_path': 'None', 'fail_fast': 'False', 'log_cache_events': 'False', 'use_colors': 'True', 'static_parser': 'True', 'printer_width': '80', 'log_format': 'default', 'debug': 'False', 'log_path': '/Users/david/bbplus-os-credit-risk/bbplus-os-credit-risk/logs', 'indirect_selection': 'eager', 'cache_selected_only': 'False', 'empty': 'False', 'no_print': 'None', 'partial_parse': 'True', 'warn_error': 'None', 'send_anonymous_usage_stats': 'True', 'profiles_dir': '/Users/david/.dbt', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])'}
+[0m22:17:14.036111 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'c5d8d364-9dac-4596-bed0-bb7ee32dfc1f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8919d6ae80>]}
+[0m22:17:14.093238 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'c5d8d364-9dac-4596-bed0-bb7ee32dfc1f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f89161deeb0>]}
+[0m22:17:14.094029 [info ] [MainThread]: Registered adapter: bigquery=1.8.3
+[0m22:17:14.118805 [debug] [MainThread]: checksum: ec53e341a936509427e16df1c646386a84befec52c1957e3f4359fbc36fc93f5, vars: {}, profile: , target: , version: 1.8.8
+[0m22:17:14.396918 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m22:17:14.397401 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m22:17:14.458797 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'c5d8d364-9dac-4596-bed0-bb7ee32dfc1f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f891a87a130>]}
+[0m22:17:14.624709 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'c5d8d364-9dac-4596-bed0-bb7ee32dfc1f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f891a8418e0>]}
+[0m22:17:14.625329 [info ] [MainThread]: Found 7 models, 2 seeds, 1 operation, 480 macros
+[0m22:17:14.625996 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c5d8d364-9dac-4596-bed0-bb7ee32dfc1f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f891a88ab20>]}
+[0m22:17:14.627428 [info ] [MainThread]: 
+[0m22:17:14.628104 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m22:17:14.633235 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_steam-outlet-209412'
+[0m22:17:14.633886 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:17:17.117928 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_steam-outlet-209412, now list_steam-outlet-209412_oscreditrisk)
+[0m22:17:17.118924 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m22:17:17.753920 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c5d8d364-9dac-4596-bed0-bb7ee32dfc1f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f891a5cea00>]}
+[0m22:17:17.754903 [info ] [MainThread]: 
+[0m22:17:17.755598 [info ] [MainThread]: Running 1 on-run-start hook
+[0m22:17:17.775115 [debug] [MainThread]: Writing injected SQL for node "operation.creditrisk.creditrisk-on-run-start-0"
+[0m22:17:17.782527 [info ] [MainThread]: 1 of 1 START hook: creditrisk.on-run-start.0 ................................... [RUN]
+[0m22:17:17.783538 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m22:17:17.784354 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "creditrisk", "target_name": "dev", "connection_name": "master"} */
+
+
+CREATE SCHEMA IF NOT EXISTS oscreditrisk;
+
+CREATE OR REPLACE FUNCTION oscreditrisk.payment_linearization(
+  payment_amounts ARRAY<FLOAT64>,
+  daily_rate ARRAY<FLOAT64>,
+  reporting_dates ARRAY<STRING>
+)
+
+RETURNS ARRAY<FLOAT64>
+LANGUAGE js AS """
+    let result = [];
+    let balance = 0.0;
+
+    for (let i = 0; i < payment_amounts.length; i++) {
+        if (payment_amounts[i] > 0) {
+            // Add payment to balance
+            balance += payment_amounts[i];
+        }
+
+        if (balance >= daily_rate[i]) {
+            result.push(daily_rate[i]);
+            balance = balance - daily_rate[i];
+        }
+        else if (balance > 0.0) {
+            result.push(balance);
+            balance = 0.0
+        } 
+        else {
+            // Push zero for days with no payment distribution
+            result.push(0.0);
+            balance = 0.0
+        }
+    }
+    return result;
+""";
+  
+
+[0m22:17:18.516362 [debug] [MainThread]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=steam-outlet-209412&j=bq:EU:439d3e98-0f2d-47a6-98ed-345ba5be709f&page=queryresults
+[0m22:17:19.923423 [info ] [MainThread]: 1 of 1 OK hook: creditrisk.on-run-start.0 ...................................... [[32mSCRIPT (0 processed)[0m in 2.14s]
+[0m22:17:19.924597 [info ] [MainThread]: 
+[0m22:17:19.925928 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m22:17:19.926863 [info ] [MainThread]: 
+[0m22:17:19.931767 [debug] [Thread-1  ]: Began running node model.creditrisk.accounts_history_advanced
+[0m22:17:19.932867 [info ] [Thread-1  ]: 1 of 2 START sql table model oscreditrisk.accounts_history_advanced ............ [RUN]
+[0m22:17:19.933988 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_steam-outlet-209412_oscreditrisk, now model.creditrisk.accounts_history_advanced)
+[0m22:17:19.934908 [debug] [Thread-1  ]: Began compiling node model.creditrisk.accounts_history_advanced
+[0m22:17:19.943552 [debug] [Thread-1  ]: Writing injected SQL for node "model.creditrisk.accounts_history_advanced"
+[0m22:17:19.946097 [debug] [Thread-1  ]: Began executing node model.creditrisk.accounts_history_advanced
+[0m22:17:19.988584 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m22:17:20.689565 [debug] [Thread-1  ]: Writing runtime sql for node "model.creditrisk.accounts_history_advanced"
+[0m22:17:20.691327 [debug] [Thread-1  ]: On model.creditrisk.accounts_history_advanced: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "creditrisk", "target_name": "dev", "node_id": "model.creditrisk.accounts_history_advanced"} */
+
+  
+    
+
+    create or replace table `steam-outlet-209412`.`oscreditrisk`.`accounts_history_advanced`
+      
+    partition by timestamp_trunc(reporting_date, day)
+    cluster by account_id
+
+    OPTIONS()
+    as (
+      /*
+    This transformations is generating the second version of the core dataset (advanced version)
+    The main complexity lies in the fact that SQL is not sufficient to calculate the linearized payments. 
+    We thus need to use a User Defined Function (here in Javascript) - but we could also use another programming language. 
+*/
+
+
+
+WITH accounts_history as (
+    SELECT * FROM `steam-outlet-209412`.`oscreditrisk`.`accounts_history_beginner`
+),
+
+additional_kpis as (
+    SELECT 
+        *,
+        
+        CASE 
+            WHEN reporting_day <= down_payment_days_included THEN Null
+            WHEN reporting_day = down_payment_days_included + 1 THEN paid_total
+            ELSE amount_excl_dp
+        END as amount_excl_dp_period, -- This step is necessary to 'record' payments at the end of the downpayment period.
+
+        CASE  
+            WHEN reporting_day < down_payment_days_included THEN Null
+            WHEN reporting_day >= down_payment_days_included THEN reporting_day - down_payment_days_included
+        END as reporting_day_excl_dp, -- Necessary to remove the downpayment period from analyses
+
+    FROM accounts_history
+),
+
+-- Preparing the data for the UDF (consuming arrays)
+prepared_for_udf as (
+    SELECT
+        account_id,
+        ARRAY_AGG(COALESCE(amount_excl_dp_period, 0)     ORDER BY reporting_day) as payment_amounts,
+        ARRAY_AGG(daily_rate                             ORDER BY reporting_day) as daily_rates,
+        ARRAY_AGG(CAST(DATE(reporting_date) as STRING)   ORDER BY reporting_day) as casted_reporting_dates,
+    FROM additional_kpis
+    GROUP BY ALL
+),
+
+-- applying the UDF on prepared data format
+apply_udf AS (
+    SELECT 
+        *,
+        oscreditrisk.payment_linearization(
+        prepared_for_udf.payment_amounts, 
+        prepared_for_udf.daily_rates, 
+        prepared_for_udf.casted_reporting_dates
+        ) as payment_amount_lin_excl_dp
+    FROM prepared_for_udf
+),
+
+-- Expanding the results before joining them back
+expand_udf_result AS (
+    SELECT
+        account_id,
+        CAST(reporting_date AS TIMESTAMP) as reporting_date,
+        amount_lin
+    FROM
+        apply_udf,
+        UNNEST(apply_udf.casted_reporting_dates)            AS reporting_date   WITH OFFSET AS pos
+    JOIN UNNEST(apply_udf.payment_amount_lin_excl_dp)     AS amount_lin       WITH OFFSET AS val_pos
+    ON pos = val_pos
+),
+
+join_back_on_dataset as (
+    SELECT 
+        *,
+        SUM(amount_lin) OVER(PARTITION BY account_id ORDER BY reporting_day ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW) as paid_total_lin,
+        IF(
+            amount_lin = 0 AND LAG(amount_lin) OVER(PARTITION BY account_id ORDER BY reporting_day) > 0,
+            reporting_date,
+            Null
+        ) as last_disablement,
+    FROM additional_kpis 
+    LEFT JOIN expand_udf_result USING(account_id, reporting_date)
+),
+
+-- As a last step, use this information to calculate useful fields: status and number of days disabled.
+final_kpis as (
+  SELECT 
+    *,
+    CASE 
+        WHEN reporting_day <= down_payment_days_included THEN 'ENABLED'
+        WHEN paid_total >= unlock_price THEN 'UNLOCKED'
+        WHEN amount_lin > 0   THEN 'ENABLED'
+        WHEN amount_lin <= 0  THEN 'DISABLED'
+    END as reporting_date_status,
+    CASE 
+        WHEN amount_lin = 0 
+        THEN DATE_DIFF(
+            reporting_date, 
+            LAST_VALUE(last_disablement IGNORE NULLS) OVER(PARTITION BY account_id ORDER BY reporting_day),
+            DAY
+        ) 
+    END as days_disabled,
+  FROM join_back_on_dataset
+)
+
+SELECT * FROM final_kpis
+    );
+  
+[0m22:17:21.174488 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=steam-outlet-209412&j=bq:EU:ca0287c8-17f0-4b76-ae63-2d78a49c041f&page=queryresults
+[0m22:18:01.581404 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c5d8d364-9dac-4596-bed0-bb7ee32dfc1f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8919cba730>]}
+[0m22:18:01.583217 [info ] [Thread-1  ]: 1 of 2 OK created sql table model oscreditrisk.accounts_history_advanced ....... [[32mCREATE TABLE (3.4m rows, 485.9 MiB processed)[0m in 41.65s]
+[0m22:18:01.584229 [debug] [Thread-1  ]: Finished running node model.creditrisk.accounts_history_advanced
+[0m22:18:01.585421 [debug] [Thread-1  ]: Began running node model.creditrisk.cohorts_advanced
+[0m22:18:01.586192 [info ] [Thread-1  ]: 2 of 2 START sql view model oscreditrisk.cohorts_advanced ...................... [RUN]
+[0m22:18:01.586893 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.creditrisk.accounts_history_advanced, now model.creditrisk.cohorts_advanced)
+[0m22:18:01.587482 [debug] [Thread-1  ]: Began compiling node model.creditrisk.cohorts_advanced
+[0m22:18:01.592770 [debug] [Thread-1  ]: Writing injected SQL for node "model.creditrisk.cohorts_advanced"
+[0m22:18:01.593872 [debug] [Thread-1  ]: Began executing node model.creditrisk.cohorts_advanced
+[0m22:18:01.625835 [debug] [Thread-1  ]: Writing runtime sql for node "model.creditrisk.cohorts_advanced"
+[0m22:18:01.627217 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m22:18:01.628719 [debug] [Thread-1  ]: On model.creditrisk.cohorts_advanced: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "creditrisk", "target_name": "dev", "node_id": "model.creditrisk.cohorts_advanced"} */
+
+
+  create or replace view `steam-outlet-209412`.`oscreditrisk`.`cohorts_advanced`
+  OPTIONS()
+  as /*
+    This transformations is aggregating on a cohort level for visualisation.
+    It uses the advanced core dataset.
+    Produces information on linearized payments and with a term elapsed in % excluding downpayment.
+*/
+
+WITH accounts_history as (
+    SELECT * FROM `steam-outlet-209412`.`oscreditrisk`.`accounts_history_advanced`
+),
+
+perc_elapsed as (
+    SELECT 
+        *,
+        SAFE_DIVIDE(reporting_day_excl_dp, nominal_term_excl_dp) as perc_term_elapsed,
+    FROM accounts_history
+),
+
+approximating as (
+    SELECT
+        *,
+        -- Flooring the perc paid to the next 5% (we could choose another grain)
+        FLOOR(perc_term_elapsed * 20) * 5 as perc_term_elapsed_approx,
+    FROM perc_elapsed
+),
+
+downsampling as (
+    SELECT 
+        * 
+    FROM approximating
+    -- Optional : limit the time horizon to 200% of contractual term. Often sufficient.
+    WHERE perc_term_elapsed_approx <= 200
+    -- Ensure the dataset ends up with only one row per grain on % of contractual term
+    QUALIFY ROW_NUMBER() OVER(PARTITION BY account_id, CAST(perc_term_elapsed_approx AS STRING) ORDER BY reporting_day_excl_dp) = 1
+),
+
+counting_accounts as (
+  SELECT 
+    *,
+    COUNT(account_id) OVER (PARTITION BY cohort_month, CAST(perc_term_elapsed_approx AS INT64)) as cnt_accounts,
+  FROM downsampling
+),
+
+filtering as (
+    SELECT 
+        *,
+    FROM counting_accounts
+    -- optional - removes the end of cohorts where calculation is not representative of the whole cohort. 
+    -- We take 98% and not 100% as otherwise only a few outliers might prevent us from showing the cohort.
+    QUALIFY cnt_accounts >= 0.98 * MAX(cnt_accounts) OVER(PARTITION BY cohort_month) 
+),
+
+aggregating as (
+    SELECT 
+        cohort_month,
+        perc_term_elapsed_approx,
+        SUM(paid_total_lin) / SUM(unlock_price - downpayment) as amount_paid_percent,
+    FROM filtering
+    GROUP BY ALL 
+)
+
+SELECT * FROM aggregating;
+
+
+[0m22:18:02.443497 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=steam-outlet-209412&j=bq:EU:1cd42996-e473-46aa-9bac-43a52aa703fe&page=queryresults
+[0m22:18:02.735915 [debug] [Thread-1  ]: BigQuery adapter: Retry attempt 1 of 1 after error: BadRequest('Unrecognized name: downpayment; Did you mean down_payment? at [61:50]; reason: invalidQuery, location: query, message: Unrecognized name: downpayment; Did you mean down_payment? at [61:50]')
+[0m22:18:04.071935 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=steam-outlet-209412&j=bq:EU:bc836f1d-4e07-4f66-905b-e59b65910530&page=queryresults
+[0m22:18:04.373862 [error] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=steam-outlet-209412&j=bq:EU:bc836f1d-4e07-4f66-905b-e59b65910530&page=queryresults
+[0m22:18:04.389375 [debug] [Thread-1  ]: Database Error in model cohorts_advanced (models/example/2_cohort_visualizations/cohorts_advanced.sql)
+  Unrecognized name: downpayment; Did you mean down_payment? at [61:50]
+  compiled code at target/run/creditrisk/models/example/2_cohort_visualizations/cohorts_advanced.sql
+[0m22:18:04.390729 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c5d8d364-9dac-4596-bed0-bb7ee32dfc1f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f891b29e790>]}
+[0m22:18:04.392433 [error] [Thread-1  ]: 2 of 2 ERROR creating sql view model oscreditrisk.cohorts_advanced ............. [[31mERROR[0m in 2.80s]
+[0m22:18:04.394252 [debug] [Thread-1  ]: Finished running node model.creditrisk.cohorts_advanced
+[0m22:18:04.397001 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m22:18:04.397728 [debug] [MainThread]: Connection 'model.creditrisk.cohorts_advanced' was properly closed.
+[0m22:18:04.399034 [info ] [MainThread]: 
+[0m22:18:04.399920 [info ] [MainThread]: Finished running 1 table model, 1 view model, 1 project hook in 0 hours 0 minutes and 49.77 seconds (49.77s).
+[0m22:18:04.401561 [debug] [MainThread]: Command end result
+[0m22:18:04.469637 [info ] [MainThread]: 
+[0m22:18:04.470740 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m22:18:04.471541 [info ] [MainThread]: 
+[0m22:18:04.472588 [error] [MainThread]:   Database Error in model cohorts_advanced (models/example/2_cohort_visualizations/cohorts_advanced.sql)
+  Unrecognized name: downpayment; Did you mean down_payment? at [61:50]
+  compiled code at target/run/creditrisk/models/example/2_cohort_visualizations/cohorts_advanced.sql
+[0m22:18:04.473254 [info ] [MainThread]: 
+[0m22:18:04.473865 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=1 SKIP=0 TOTAL=2
+[0m22:18:04.474737 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 54.450024, "process_user_time": 5.413385, "process_kernel_time": 0.922376, "process_mem_max_rss": "229748736", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m22:18:04.476025 [debug] [MainThread]: Command `dbt run` failed at 22:18:04.475629 after 54.45 seconds
+[0m22:18:04.476849 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f89142215b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f891466f8e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8915acd280>]}
+[0m22:18:04.477820 [debug] [MainThread]: Flushing usage events
+[0m22:18:25.651821 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7feb87a33520>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7feb89b71d60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7feb89b710a0>]}
+
+
+============================== 22:18:25.657335 | ff6245b6-661b-4c65-b734-deeac7955056 ==============================
+[0m22:18:25.657335 [info ] [MainThread]: Running with dbt=1.8.8
+[0m22:18:25.658289 [debug] [MainThread]: running dbt with arguments {'send_anonymous_usage_stats': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'write_json': 'True', 'use_experimental_parser': 'False', 'invocation_command': 'dbt run --select 1+cohorts_advanced', 'empty': 'False', 'static_parser': 'True', 'warn_error': 'None', 'log_path': '/Users/david/bbplus-os-credit-risk/bbplus-os-credit-risk/logs', 'introspect': 'True', 'log_format': 'default', 'log_cache_events': 'False', 'fail_fast': 'False', 'no_print': 'None', 'target_path': 'None', 'version_check': 'True', 'printer_width': '80', 'indirect_selection': 'eager', 'profiles_dir': '/Users/david/.dbt', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'use_colors': 'True', 'debug': 'False', 'quiet': 'False'}
+[0m22:18:30.252169 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'ff6245b6-661b-4c65-b734-deeac7955056', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7feb88573820>]}
+[0m22:18:30.343261 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'ff6245b6-661b-4c65-b734-deeac7955056', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7feb8dbfc1c0>]}
+[0m22:18:30.344481 [info ] [MainThread]: Registered adapter: bigquery=1.8.3
+[0m22:18:30.381277 [debug] [MainThread]: checksum: ec53e341a936509427e16df1c646386a84befec52c1957e3f4359fbc36fc93f5, vars: {}, profile: , target: , version: 1.8.8
+[0m22:18:31.202773 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m22:18:31.203589 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m22:18:31.341480 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'ff6245b6-661b-4c65-b734-deeac7955056', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7feb8df6a130>]}
+[0m22:18:31.687263 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'ff6245b6-661b-4c65-b734-deeac7955056', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7feb8df8e0a0>]}
+[0m22:18:31.688853 [info ] [MainThread]: Found 7 models, 2 seeds, 1 operation, 480 macros
+[0m22:18:31.690390 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ff6245b6-661b-4c65-b734-deeac7955056', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7feb8df66fd0>]}
+[0m22:18:31.694930 [info ] [MainThread]: 
+[0m22:18:31.698169 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m22:18:31.711354 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_steam-outlet-209412'
+[0m22:18:31.712594 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:18:35.098919 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_steam-outlet-209412, now list_steam-outlet-209412_oscreditrisk)
+[0m22:18:35.099919 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m22:18:35.673147 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ff6245b6-661b-4c65-b734-deeac7955056', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7feb8dd0b5b0>]}
+[0m22:18:35.674089 [info ] [MainThread]: 
+[0m22:18:35.674683 [info ] [MainThread]: Running 1 on-run-start hook
+[0m22:18:35.695982 [debug] [MainThread]: Writing injected SQL for node "operation.creditrisk.creditrisk-on-run-start-0"
+[0m22:18:35.705810 [info ] [MainThread]: 1 of 1 START hook: creditrisk.on-run-start.0 ................................... [RUN]
+[0m22:18:35.707010 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m22:18:35.707908 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "creditrisk", "target_name": "dev", "connection_name": "master"} */
+
+
+CREATE SCHEMA IF NOT EXISTS oscreditrisk;
+
+CREATE OR REPLACE FUNCTION oscreditrisk.payment_linearization(
+  payment_amounts ARRAY<FLOAT64>,
+  daily_rate ARRAY<FLOAT64>,
+  reporting_dates ARRAY<STRING>
+)
+
+RETURNS ARRAY<FLOAT64>
+LANGUAGE js AS """
+    let result = [];
+    let balance = 0.0;
+
+    for (let i = 0; i < payment_amounts.length; i++) {
+        if (payment_amounts[i] > 0) {
+            // Add payment to balance
+            balance += payment_amounts[i];
+        }
+
+        if (balance >= daily_rate[i]) {
+            result.push(daily_rate[i]);
+            balance = balance - daily_rate[i];
+        }
+        else if (balance > 0.0) {
+            result.push(balance);
+            balance = 0.0
+        } 
+        else {
+            // Push zero for days with no payment distribution
+            result.push(0.0);
+            balance = 0.0
+        }
+    }
+    return result;
+""";
+  
+
+[0m22:18:36.340140 [debug] [MainThread]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=steam-outlet-209412&j=bq:EU:de282174-2bb9-4d93-8108-497b8d4d235b&page=queryresults
+[0m22:18:38.083561 [info ] [MainThread]: 1 of 1 OK hook: creditrisk.on-run-start.0 ...................................... [[32mSCRIPT (0 processed)[0m in 2.38s]
+[0m22:18:38.084271 [info ] [MainThread]: 
+[0m22:18:38.085016 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m22:18:38.085599 [info ] [MainThread]: 
+[0m22:18:38.092392 [debug] [Thread-1  ]: Began running node model.creditrisk.accounts_history_advanced
+[0m22:18:38.093721 [info ] [Thread-1  ]: 1 of 2 START sql table model oscreditrisk.accounts_history_advanced ............ [RUN]
+[0m22:18:38.094756 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_steam-outlet-209412_oscreditrisk, now model.creditrisk.accounts_history_advanced)
+[0m22:18:38.096107 [debug] [Thread-1  ]: Began compiling node model.creditrisk.accounts_history_advanced
+[0m22:18:38.107550 [debug] [Thread-1  ]: Writing injected SQL for node "model.creditrisk.accounts_history_advanced"
+[0m22:18:38.109299 [debug] [Thread-1  ]: Began executing node model.creditrisk.accounts_history_advanced
+[0m22:18:38.160013 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m22:18:38.797669 [debug] [Thread-1  ]: Writing runtime sql for node "model.creditrisk.accounts_history_advanced"
+[0m22:18:38.799004 [debug] [Thread-1  ]: On model.creditrisk.accounts_history_advanced: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "creditrisk", "target_name": "dev", "node_id": "model.creditrisk.accounts_history_advanced"} */
+
+  
+    
+
+    create or replace table `steam-outlet-209412`.`oscreditrisk`.`accounts_history_advanced`
+      
+    partition by timestamp_trunc(reporting_date, day)
+    cluster by account_id
+
+    OPTIONS()
+    as (
+      /*
+    This transformations is generating the second version of the core dataset (advanced version)
+    The main complexity lies in the fact that SQL is not sufficient to calculate the linearized payments. 
+    We thus need to use a User Defined Function (here in Javascript) - but we could also use another programming language. 
+*/
+
+
+
+WITH accounts_history as (
+    SELECT * FROM `steam-outlet-209412`.`oscreditrisk`.`accounts_history_beginner`
+),
+
+additional_kpis as (
+    SELECT 
+        *,
+        
+        CASE 
+            WHEN reporting_day <= down_payment_days_included THEN Null
+            WHEN reporting_day = down_payment_days_included + 1 THEN paid_total
+            ELSE amount_excl_dp
+        END as amount_excl_dp_period, -- This step is necessary to 'record' payments at the end of the downpayment period.
+
+        CASE  
+            WHEN reporting_day < down_payment_days_included THEN Null
+            WHEN reporting_day >= down_payment_days_included THEN reporting_day - down_payment_days_included
+        END as reporting_day_excl_dp, -- Necessary to remove the downpayment period from analyses
+
+    FROM accounts_history
+),
+
+-- Preparing the data for the UDF (consuming arrays)
+prepared_for_udf as (
+    SELECT
+        account_id,
+        ARRAY_AGG(COALESCE(amount_excl_dp_period, 0)     ORDER BY reporting_day) as payment_amounts,
+        ARRAY_AGG(daily_rate                             ORDER BY reporting_day) as daily_rates,
+        ARRAY_AGG(CAST(DATE(reporting_date) as STRING)   ORDER BY reporting_day) as casted_reporting_dates,
+    FROM additional_kpis
+    GROUP BY ALL
+),
+
+-- applying the UDF on prepared data format
+apply_udf AS (
+    SELECT 
+        *,
+        oscreditrisk.payment_linearization(
+        prepared_for_udf.payment_amounts, 
+        prepared_for_udf.daily_rates, 
+        prepared_for_udf.casted_reporting_dates
+        ) as payment_amount_lin_excl_dp
+    FROM prepared_for_udf
+),
+
+-- Expanding the results before joining them back
+expand_udf_result AS (
+    SELECT
+        account_id,
+        CAST(reporting_date AS TIMESTAMP) as reporting_date,
+        amount_lin
+    FROM
+        apply_udf,
+        UNNEST(apply_udf.casted_reporting_dates)            AS reporting_date   WITH OFFSET AS pos
+    JOIN UNNEST(apply_udf.payment_amount_lin_excl_dp)     AS amount_lin       WITH OFFSET AS val_pos
+    ON pos = val_pos
+),
+
+join_back_on_dataset as (
+    SELECT 
+        *,
+        SUM(amount_lin) OVER(PARTITION BY account_id ORDER BY reporting_day ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW) as paid_total_lin,
+        IF(
+            amount_lin = 0 AND LAG(amount_lin) OVER(PARTITION BY account_id ORDER BY reporting_day) > 0,
+            reporting_date,
+            Null
+        ) as last_disablement,
+    FROM additional_kpis 
+    LEFT JOIN expand_udf_result USING(account_id, reporting_date)
+),
+
+-- As a last step, use this information to calculate useful fields: status and number of days disabled.
+final_kpis as (
+  SELECT 
+    *,
+    CASE 
+        WHEN reporting_day <= down_payment_days_included THEN 'ENABLED'
+        WHEN paid_total >= unlock_price THEN 'UNLOCKED'
+        WHEN amount_lin > 0   THEN 'ENABLED'
+        WHEN amount_lin <= 0  THEN 'DISABLED'
+    END as reporting_date_status,
+    CASE 
+        WHEN amount_lin = 0 
+        THEN DATE_DIFF(
+            reporting_date, 
+            LAST_VALUE(last_disablement IGNORE NULLS) OVER(PARTITION BY account_id ORDER BY reporting_day),
+            DAY
+        ) 
+    END as days_disabled,
+  FROM join_back_on_dataset
+)
+
+SELECT * FROM final_kpis
+    );
+  
+[0m22:18:39.338361 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=steam-outlet-209412&j=bq:EU:a34be21e-9332-4d34-8ac2-e7aacf661df6&page=queryresults
+[0m22:19:25.999793 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ff6245b6-661b-4c65-b734-deeac7955056', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7feb8d5da670>]}
+[0m22:19:26.001184 [info ] [Thread-1  ]: 1 of 2 OK created sql table model oscreditrisk.accounts_history_advanced ....... [[32mCREATE TABLE (3.4m rows, 485.9 MiB processed)[0m in 47.90s]
+[0m22:19:26.002235 [debug] [Thread-1  ]: Finished running node model.creditrisk.accounts_history_advanced
+[0m22:19:26.003640 [debug] [Thread-1  ]: Began running node model.creditrisk.cohorts_advanced
+[0m22:19:26.004500 [info ] [Thread-1  ]: 2 of 2 START sql view model oscreditrisk.cohorts_advanced ...................... [RUN]
+[0m22:19:26.005292 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.creditrisk.accounts_history_advanced, now model.creditrisk.cohorts_advanced)
+[0m22:19:26.005900 [debug] [Thread-1  ]: Began compiling node model.creditrisk.cohorts_advanced
+[0m22:19:26.010918 [debug] [Thread-1  ]: Writing injected SQL for node "model.creditrisk.cohorts_advanced"
+[0m22:19:26.012022 [debug] [Thread-1  ]: Began executing node model.creditrisk.cohorts_advanced
+[0m22:19:26.041340 [debug] [Thread-1  ]: Writing runtime sql for node "model.creditrisk.cohorts_advanced"
+[0m22:19:26.043287 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m22:19:26.044196 [debug] [Thread-1  ]: On model.creditrisk.cohorts_advanced: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "creditrisk", "target_name": "dev", "node_id": "model.creditrisk.cohorts_advanced"} */
+
+
+  create or replace view `steam-outlet-209412`.`oscreditrisk`.`cohorts_advanced`
+  OPTIONS()
+  as /*
+    This transformations is aggregating on a cohort level for visualisation.
+    It uses the advanced core dataset.
+    Produces information on linearized payments and with a term elapsed in % excluding downpayment.
+*/
+
+WITH accounts_history as (
+    SELECT * FROM `steam-outlet-209412`.`oscreditrisk`.`accounts_history_advanced`
+),
+
+perc_elapsed as (
+    SELECT 
+        *,
+        SAFE_DIVIDE(reporting_day_excl_dp, nominal_term_excl_dp) as perc_term_elapsed,
+    FROM accounts_history
+),
+
+approximating as (
+    SELECT
+        *,
+        -- Flooring the perc paid to the next 5% (we could choose another grain)
+        FLOOR(perc_term_elapsed * 20) * 5 as perc_term_elapsed_approx,
+    FROM perc_elapsed
+),
+
+downsampling as (
+    SELECT 
+        * 
+    FROM approximating
+    -- Optional : limit the time horizon to 200% of contractual term. Often sufficient.
+    WHERE perc_term_elapsed_approx <= 200
+    -- Ensure the dataset ends up with only one row per grain on % of contractual term
+    QUALIFY ROW_NUMBER() OVER(PARTITION BY account_id, CAST(perc_term_elapsed_approx AS STRING) ORDER BY reporting_day_excl_dp) = 1
+),
+
+counting_accounts as (
+  SELECT 
+    *,
+    COUNT(account_id) OVER (PARTITION BY cohort_month, CAST(perc_term_elapsed_approx AS INT64)) as cnt_accounts,
+  FROM downsampling
+),
+
+filtering as (
+    SELECT 
+        *,
+    FROM counting_accounts
+    -- optional - removes the end of cohorts where calculation is not representative of the whole cohort. 
+    -- We take 98% and not 100% as otherwise only a few outliers might prevent us from showing the cohort.
+    QUALIFY cnt_accounts >= 0.98 * MAX(cnt_accounts) OVER(PARTITION BY cohort_month) 
+),
+
+aggregating as (
+    SELECT 
+        cohort_month,
+        perc_term_elapsed_approx,
+        SUM(paid_total_lin) / SUM(unlock_price - down_payment) as amount_paid_percent,
+    FROM filtering
+    GROUP BY ALL 
+)
+
+SELECT * FROM aggregating;
+
+
+[0m22:19:26.844466 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=steam-outlet-209412&j=bq:EU:a058c943-aacc-49c0-949e-adae4cafbf97&page=queryresults
+[0m22:19:27.534499 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ff6245b6-661b-4c65-b734-deeac7955056', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7feb8e85e5b0>]}
+[0m22:19:27.535554 [info ] [Thread-1  ]: 2 of 2 OK created sql view model oscreditrisk.cohorts_advanced ................. [[32mCREATE VIEW (0 processed)[0m in 1.53s]
+[0m22:19:27.536873 [debug] [Thread-1  ]: Finished running node model.creditrisk.cohorts_advanced
+[0m22:19:27.538738 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m22:19:27.539458 [debug] [MainThread]: Connection 'model.creditrisk.cohorts_advanced' was properly closed.
+[0m22:19:27.540643 [info ] [MainThread]: 
+[0m22:19:27.542321 [info ] [MainThread]: Finished running 1 table model, 1 view model, 1 project hook in 0 hours 0 minutes and 55.84 seconds (55.84s).
+[0m22:19:27.544602 [debug] [MainThread]: Command end result
+[0m22:19:27.613385 [info ] [MainThread]: 
+[0m22:19:27.614326 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m22:19:27.614920 [info ] [MainThread]: 
+[0m22:19:27.615546 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[0m22:19:27.616454 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 62.06488, "process_user_time": 6.502736, "process_kernel_time": 1.218672, "process_mem_max_rss": "228012032", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m22:19:27.617958 [debug] [MainThread]: Command `dbt run` succeeded at 22:19:27.617745 after 62.07 seconds
+[0m22:19:27.618777 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7feb87a33520>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7feb8dfc3a90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7feb8dbfc1c0>]}
+[0m22:19:27.619498 [debug] [MainThread]: Flushing usage events

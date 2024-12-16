@@ -76,6 +76,17 @@ calc_paid_total as (
     
     SAFE_DIVIDE(unlock_price - down_payment, daily_rate) + down_payment_days_included as nominal_term,
     SAFE_DIVIDE(unlock_price - down_payment, daily_rate)                              as nominal_term_excl_dp,
+
+    MAX(reporting_day) OVER(PARTITION BY account_id) as account_age_in_days,
+    GREATEST(
+            0,
+            MAX(reporting_day - down_payment_days_included) OVER(PARTITION BY account_id)
+    ) as account_age_excl_dp_in_days,
+
+    DATE_TRUNC(registration_date, MONTH) as cohort_month,
+    DATE_TRUNC(registration_date, QUARTER) as cohort_quarter,
+    DATE_TRUNC(registration_date, YEAR) as cohort_year,
+
   FROM joint
 )
 

@@ -25,11 +25,6 @@ additional_kpis as (
             WHEN reporting_day >= down_payment_days_included THEN reporting_day - down_payment_days_included
         END as reporting_day_excl_dp, -- Necessary to remove the downpayment period from analyses
 
-        GREATEST(
-            0,
-            MAX(reporting_day - down_payment_days_included) OVER(PARTITION BY account_id)
-         ) as account_age_excl_dp_in_days,
-
     FROM accounts_history
 ),
 
@@ -82,6 +77,7 @@ join_back_on_dataset as (
     LEFT JOIN expand_udf_result USING(account_id, reporting_date)
 ),
 
+-- As a last step, use this information to calculate useful fields: status and number of days disabled.
 final_kpis as (
   SELECT 
     *,
