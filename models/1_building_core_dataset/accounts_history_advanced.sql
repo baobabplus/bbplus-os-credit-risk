@@ -8,6 +8,10 @@ WITH accounts_history as (
     SELECT * FROM {{ref('accounts_history_beginner')}}
 ),
 
+wo as (
+    SELECT * FROM {{ref('cleaned_write_offs')}}
+),
+
 additional_kpis as (
     SELECT 
         *,
@@ -75,11 +79,23 @@ join_back_on_dataset as (
     LEFT JOIN expand_udf_result USING(account_id, reporting_date)
 ),
 
+join_wo_statuses as (
+    SELECT 
+        join_back_on_dataset.*,
+        wo.write_off_status,
+    FROM join_back_on_dataset
+    LEFT JOIN wo 
+    ON 
+        wo.account_id = join_back_on_dataset.account_id AND 
+        wo.changed_date <= join_back_on_dataset.reporting_date
+),
+
 -- As a last step, use this information to calculate useful fields: status and number of days disabled.
 final_kpis as (
   SELECT 
-    *,
+    * EXCEPT(write_off_status),
     CASE 
+        WHEN write_off_status IS NOT NULL THEN write_off_status
         WHEN reporting_day <= down_payment_days_included THEN 'ENABLED'
         WHEN paid_total >= unlock_price THEN 'UNLOCKED'
         WHEN amount_lin > 0   THEN 'ENABLED'
@@ -93,7 +109,7 @@ final_kpis as (
             DAY
         ) 
     END as days_disabled,
-  FROM join_back_on_dataset
+  FROM join_wo_statuses
 )
 
 SELECT * FROM final_kpis
