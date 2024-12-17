@@ -61,6 +61,8 @@ calc_paid_total as (
     SUM(amount)         OVER(PARTITION BY account_id ORDER BY reporting_day ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW) as paid_total,
     SUM(amount_excl_dp) OVER(PARTITION BY account_id ORDER BY reporting_day ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW) as paid_total_excl_dp,
     
+    unlock_price - down_payment as unlock_price_excl_dp,
+
     SAFE_DIVIDE(unlock_price - down_payment, daily_rate) + down_payment_days_included as nominal_term,
     SAFE_DIVIDE(unlock_price - down_payment, daily_rate)                              as nominal_term_excl_dp,
 

@@ -71,7 +71,7 @@ join_back_on_dataset as (
         *,
         SUM(amount_lin) OVER(PARTITION BY account_id ORDER BY reporting_day ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW) as paid_total_lin,
         IF(
-            amount_lin = 0 AND LAG(amount_lin) OVER(PARTITION BY account_id ORDER BY reporting_day) > 0,
+            paid_total < unlock_price AND amount_lin = 0 AND LAG(amount_lin) OVER(PARTITION BY account_id ORDER BY reporting_day) > 0,
             reporting_date,
             Null
         ) as last_disablement,
@@ -109,7 +109,31 @@ final_kpis as (
             DAY
         ) 
     END as days_disabled,
+    paid_total_excl_dp / unlock_price_excl_dp as perc_paid,
   FROM join_wo_statuses
+),
+
+usage_rates as (
+    SELECT 
+        *,
+        AVG(
+            IF(reporting_date_status in ('ENABLED', 'UNLOCKED'), 1, 0)
+        ) OVER(
+            PARTITION BY account_id ORDER BY reporting_day ROWS BETWEEN 180 PRECEDING AND CURRENT ROW
+        ) as usage_rate_last_180d,
+    FROM final_kpis
+),
+
+segmentations as (
+    SELECT 
+        *,
+        CASE 
+            WHEN usage_rate_last_180d >= 0.95 THEN 'A'
+            WHEN usage_rate_last_180d >= 0.90 THEN 'B'
+            WHEN usage_rate_last_180d >= 0.60 THEN 'C'
+            WHEN usage_rate_last_180d < 0.60  THEN 'D'
+        END as account_segmentation,
+    FROM usage_rates
 )
 
-SELECT * FROM final_kpis
+SELECT * FROM segmentations

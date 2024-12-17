@@ -53,7 +53,7 @@ aggregating as (
     SELECT 
         cohort_month,
         perc_term_elapsed_approx,
-        SUM(paid_total_lin) / SUM(unlock_price - down_payment) as amount_paid_percent,
+        SUM(paid_total_lin) / SUM(unlock_price_excl_dp) as amount_paid_percent,
     FROM filtering
     GROUP BY ALL 
 )
