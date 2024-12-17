@@ -12,6 +12,7 @@ get_disablement_periods as (
     SELECT 
         account_id,
         reporting_date,
+        reporting_date_status,
         perc_paid,
         LAST_VALUE(last_disablement IGNORE NULLS) OVER(PARTITION BY account_id ORDER BY reporting_day) as last_disablement,
         days_disabled,
@@ -22,6 +23,7 @@ aggregated_disablement_periods as (
     SELECT 
         account_id,
         reporting_date,
+        reporting_date_status,
         perc_paid,
         days_disabled as duration,
     FROM get_disablement_periods
@@ -29,7 +31,7 @@ aggregated_disablement_periods as (
 )
 
 
-SELECT 
+SELECT
     *,
     IF(reporting_date = MAX(reporting_date) OVER(), 0, 1) as event,
 FROM aggregated_disablement_periods
