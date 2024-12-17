@@ -35,6 +35,7 @@ crossjoint as (
 
 grouped as (
     SELECT 
+        index_chunk,
         perc_paid_chunk_start,
         perc_paid_chunk_end,
         sample_end_date,
@@ -48,6 +49,7 @@ grouped as (
 
 get_chunck_dates as (
     SELECT 
+        index_chunk,
         perc_paid_chunk_start,
         perc_paid_chunk_end,
         MAX(sample_end_date) as sample_end_date,

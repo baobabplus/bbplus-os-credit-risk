@@ -102,6 +102,7 @@ final_kpis as (
         WHEN amount_lin <= 0  THEN 'DISABLED'
     END as reporting_date_status,
     CASE 
+        WHEN paid_total >= unlock_price THEN Null
         WHEN amount_lin = 0 
         THEN DATE_DIFF(
             reporting_date, 
@@ -133,6 +134,9 @@ segmentations as (
             WHEN usage_rate_last_180d >= 0.60 THEN 'C'
             WHEN usage_rate_last_180d < 0.60  THEN 'D'
         END as account_segmentation,
+        
+        reporting_date_status in ('ENABLED', 'DISABLED') as portfolio_scope,
+        
     FROM usage_rates
 )
 
